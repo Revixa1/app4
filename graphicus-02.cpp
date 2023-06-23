@@ -13,10 +13,14 @@
 using namespace std;
 
 int main()
-{
+{  
    Tests tests;
-   Rectangle *rect = new Rectangle;
+   Tests TestRectangle ;
+   Tests TestCarre;
    tests.tests_application();
-   rect->affiche();
+   cout<< " ~~RECTANGLE"<< endl;
+   TestRectangle.tests_unitaires_rectangle();
+   cout << "  ~~CARRE" <<endl;
+   TestCarre.tests_unitaires_carre();
    return 0;
-}
+}  

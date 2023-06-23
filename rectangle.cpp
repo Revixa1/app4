@@ -2,28 +2,28 @@
 
 using namespace std;
 
-void Rectangle::affiche() 
-{
-    cout<< "ok"<< endl;
+void Rectangle::setHauteur(int Hauteur) 
+{   
+    hauteur=Hauteur;
+    cout<< "setHauteur"<< endl;
 }
 
-void Rectangle::setHauteur(int hauteur) 
+void Rectangle::setLargeur(int Largeur) 
 {
-
-}
-
-void Rectangle::setLargeur(int largeur) 
-{
-
+    largeur = Largeur;
+    cout<< "setLargeur"<< endl;
 }
 	
-int Rectangle::getHauteur(hauteur)
+int Rectangle::getHauteur()
 {
-    
+    cout<< "getHauteur"<< endl; 
+    return hauteur;
+
 }
 
-int Rectangle::getLargeur(largeur)
+int Rectangle::getLargeur()
 {
-    
+    cout<< "getLargeur"<< endl;
+    return largeur;
 }
 

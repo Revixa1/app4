@@ -11,6 +11,7 @@
 #include "canevas.h"
 #include "forme.h"
 #include "rectangle.h"
+#include"carre.h"
 
 using namespace std;
 
@@ -20,6 +21,7 @@ public:
    // Methodes pour les tests unitaires des classes
    void tests_unitaires_formes();
    void tests_unitaires_rectangle();
+   void tests_unitaires_carre();
    void tests_unitaires_vecteur();
    void tests_unitaires_couche();
    void tests_unitaires_canevas();

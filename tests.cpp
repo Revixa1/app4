@@ -16,7 +16,25 @@ void Tests::tests_unitaires_formes()
 
 void Tests::tests_unitaires_rectangle()
 {
+   int hauteur=2;
+   int largeur=3;
+   Rectangle *TestDeRectangle; 
+   TestDeRectangle->setHauteur(hauteur);
+   TestDeRectangle->setLargeur(largeur);
+   int Hauteur = TestDeRectangle->getHauteur();
+   int Largeur = TestDeRectangle->getLargeur();
+   cout << "hauteur : "<<Hauteur<< endl;
+   cout << "Laugeur : "<<Largeur<< endl;
+}
 
+void Tests::tests_unitaires_carre()
+{
+   int tailleTest=2;
+  
+   Carre *TestDeCarre; 
+   TestDeCarre->setTaille(tailleTest);
+   int Taille=TestDeCarre->getTaille();
+   cout << "taille :"<<Taille<<endl;
 }
 
 void Tests::tests_unitaires_vecteur()
