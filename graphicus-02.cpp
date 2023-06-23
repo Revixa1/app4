@@ -6,14 +6,17 @@
  *    fichier fait partie de la distribution de Graphicus.
 ********/
 #include "tests.h"
+#include "rectangle.h"
+#include "forme.h"
+
 
 using namespace std;
 
 int main()
 {
    Tests tests;
-   
+   Rectangle *rect = new Rectangle;
    tests.tests_application();
+   rect->affiche();
    return 0;
 }
-

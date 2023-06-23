@@ -14,6 +14,11 @@ void Tests::tests_unitaires_formes()
    // Tests sur les formes geometriques
 }
 
+void Tests::tests_unitaires_rectangle()
+{
+
+}
+
 void Tests::tests_unitaires_vecteur()
 {
    // Tests sur la classe Vecteur
@@ -43,6 +48,7 @@ void Tests::tests_application()
    // Fait tous les tests applicatifs
    tests_application_cas_01();
    tests_application_cas_02();
+   
 }
 
 void Tests::tests_application_cas_01()

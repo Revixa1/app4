@@ -9,6 +9,8 @@
 
 #include <iostream>
 #include "canevas.h"
+#include "forme.h"
+#include "rectangle.h"
 
 using namespace std;
 
@@ -17,6 +19,7 @@ class Tests
 public:
    // Methodes pour les tests unitaires des classes
    void tests_unitaires_formes();
+   void tests_unitaires_rectangle();
    void tests_unitaires_vecteur();
    void tests_unitaires_couche();
    void tests_unitaires_canevas();
