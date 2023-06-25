@@ -32,30 +32,37 @@ Couche::~Couche()
 bool Couche::ajouterForme()
 {
 
-
+    return true;
 }
 
 
 int Couche::retirerForme(int indexeIn)
 {
 
-
+    return indexeIn;
 }
 int Couche::obtenirForme(int indexeIn)
 {
+    int ptr=0;
 
+    return ptr;
 }
 double Couche::aireTotale()
 {
+    double Atot=0;
 
+
+    return Atot;
 }
 bool Couche::translaterCouche(int Dx, int Dy)
 {
 
+return true;
 }
 bool Couche::initCouche()
 {
 
+return true;
 }
 
 
