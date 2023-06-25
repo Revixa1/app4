@@ -11,7 +11,8 @@ class Vecteur
 private:
     int tailleMax;
     int tailleActuelle;
-    Forme *tableau;
+    Forme **tableau;
+
 public:
 	Vecteur();
     void doublerMax();
@@ -24,8 +25,8 @@ public:
 
     bool cleanCheckup();
 
-    int getForme(int position);
-    bool addFormeEnd(int forme);
+    Forme* getForme(int position);
+    bool addFormeEnd(Forme *nomDeVAriable);
 	~Vecteur();
 };
  #endif
