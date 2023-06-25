@@ -17,7 +17,7 @@ Couche::Couche()
     bool initialise=1;
     bool active=0;
     bool inactive=0;
-    vec.cleanVecteur();
+    //vec.cleanVecteur();
 
 }
 
