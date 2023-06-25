@@ -45,6 +45,6 @@ double Carre::aire()
 
 void Carre::afficher(ostream & s)
 {
-
+    s<<"Cercle (x="<<ancrage.x<<", y="<<ancrage.y<<", c="<<taille<<", aire="<<aire()<<")"<<endl;
 
 }
