@@ -31,17 +31,18 @@ int Cercle::getRayon()
 
 
 
-double Cercle::aire(){
-double A=rayon*rayon*PI;
-cout << A << endl;
+double Cercle::aire()
+{
+    double A=rayon*rayon*PI;
+    cout << A << endl;
 
-return A;
+    return A;
 }
 
 void Cercle::afficher(ostream & s)
 {
 
-s<<"Cercle (x="<<ancrage.x<<", y="<<ancrage.y<<", r="<<rayon<<", aire="<<aire()<<")"<<endl;
+    s<<"Cercle (x="<<ancrage.x<<", y="<<ancrage.y<<", r="<<rayon<<", aire="<<aire()<<")"<<endl;
 
 
 }
