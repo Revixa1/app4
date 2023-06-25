@@ -6,13 +6,14 @@ Vecteur::Vecteur()
 {
     tailleMax=1;
     tailleActuelle=0;
-    cleanVecteur();
+    Forme  **tableau1 = new Forme*[tailleMax];
+    
 }
 
 void Vecteur::doublerMax()
 {
     int newTailleMax=2*tailleMax;
-    int *newTableau=new int[newTailleMax];
+    Forme **newTableau=new Forme*[newTailleMax];
 
     for (int i=0; i<=newTailleMax; i++)
     {
@@ -71,14 +72,14 @@ bool Vecteur::cleanCheckup()
 }
 
 
-bool  Vecteur::addFormeEnd(int forme)
+bool  Vecteur::addFormeEnd(Forme *pasRapport)
 {
     tailleActuelle++;  
 
     if (tailleActuelle >= tailleMax )
     {doublerMax();}
 
-    tableau[tailleActuelle]=forme;
+    tableau1[tailleActuelle] = pasRapport;
 
     return 1;
 }

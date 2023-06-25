@@ -11,7 +11,7 @@ class Vecteur
 private:
     int tailleMax;
     int tailleActuelle;
-    int tableau[1];
+    Forme *tableau;
 public:
 	Vecteur();
     void doublerMax();
