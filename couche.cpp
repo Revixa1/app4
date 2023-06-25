@@ -52,7 +52,7 @@ double Couche::aireTotale()
     double Atot=0;
     Forme *ptrForme;
 
-    for(int i=0;i<vec.tailleMax;i++ )
+    for(int i=0;i<vec.getTailleActuelle();i++ )
     {
         ptrForme=vec.getForme(i);
         Atot+=ptrForme->aire();
