@@ -4,10 +4,10 @@ using namespace std;
 
 
 
-Cercle::Cercle(double r, int xcoords, int ycoords)
+Cercle::Cercle(double rayonIn, int xcoords, int ycoords)
 {
 
-    rayon= r;
+    rayon= rayonIn;
     ancrage.x=xcoords;
     ancrage.y=ycoords;
 
@@ -15,9 +15,9 @@ Cercle::Cercle(double r, int xcoords, int ycoords)
 }
 
 
-void Cercle::setRayon(double Rayon) 
+void Cercle::setRayon(double rayonIn) 
 {   
-    rayon=Rayon;
+    rayon=rayonIn;
     cout<< "setRayon"<< endl;
 }
 
@@ -41,6 +41,7 @@ return A;
 void Cercle::afficher(ostream & s)
 {
 
+s<<"Cercle (x="<<ancrage.x<<", y="<<ancrage.y<<", r="<<rayon<<
 
 
 }
