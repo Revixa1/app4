@@ -41,7 +41,7 @@ return A;
 void Cercle::afficher(ostream & s)
 {
 
-s<<"Cercle (x="<<ancrage.x<<", y="<<ancrage.y<<", r="<<rayon<<
+s<<"Cercle (x="<<ancrage.x<<", y="<<ancrage.y<<", r="<<rayon<<", aire="<<aire()<<")"<<endl;
 
 
 }
