@@ -41,28 +41,38 @@ int Couche::retirerForme(int indexeIn)
     //vec.
     return indexeIn;
 }
-int Couche::obtenirForme(int indexeIn)
+Forme* Couche::obtenirForme(int indexeIn)
 {
-    int ptr=0;
-
-    return ptr;
+    Forme *ptrForme;
+    ptrForme =vec.getForme(indexeIn);
+    return ptrForme;
 }
 double Couche::aireTotale()
 {
     double Atot=0;
+    Forme *ptrForme;
+
+    for(int i=0;i<vec.tailleMax;i++ )
+    {
+        ptrForme=vec.getForme(indexeIn);
+        Atot+=ptrForme->aire();
+
+    }
 
 
     return Atot;
 }
+
+
 bool Couche::translaterCouche(int Dx, int Dy)
 {
 
-return true;
+    return true;
 }
 bool Couche::initCouche()
 {
 
-return true;
+    return true;
 }
 
 

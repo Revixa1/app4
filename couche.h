@@ -25,7 +25,7 @@ class Couche
 
       bool ajouterForme(Forme*);
       int retirerForme(int indexeIn);
-      int obtenirForme(int indexeIn);
+      Forme* obtenirForme(int indexeIn);
       double aireTotale();
       bool translaterCouche(int Dx, int Dy);
       bool initCouche();
