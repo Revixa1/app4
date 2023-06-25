@@ -8,33 +8,30 @@
 graphicus-02: graphicus-02.o tests.o canevas.o couche.o forme.o rectangle.o carre.o cercle.o
 	g++ -o graphicus-02 graphicus-02.o tests.o canevas.o couche.o forme.o rectangle.o carre.o cercle.o
 
-graphicus-02.o: graphicus-02.cpp canevas.h couche.h forme.h rectangle.h carre.h cercle.h
+graphicus-02.o: graphicus-02.cpp tests.h
 	g++ -c graphicus-02.cpp
 
 tests.o: tests.cpp tests.h canevas.h couche.h forme.h rectangle.h carre.h cercle.h
 	g++ -c tests.cpp
 
-canevas.o: canevas.cpp canevas.h couche.h forme.h rectangle.h carre.h cercle.h
+canevas.o: canevas.cpp canevas.h
 	g++ -c canevas.cpp
 
 
-couche.o: couche.cpp couche.h forme.h rectangle.h carre.h cercle.h
+couche.o: couche.cpp couche.h
 	g++ -c couche.cpp
 
-forme.o: forme.cpp forme.h rectangle.h cercle.h
+forme.o: forme.cpp forme.h
 	g++ -c forme.cpp 
 
-rectangle.o: rectangle.cpp rectangle.h cercle.h
+rectangle.o: rectangle.cpp rectangle.h
 	g++ -c rectangle.cpp
 
-carre.o: carre.cpp carre.h
+carre.o: carre.cpp carre.h rectangle.h
 	g++ -c carre.cpp
 
 
 cercle.o: cercle.cpp cercle.h
-	g++ -c cercle.cpp
-
-cercle.o: cercle.cpp cercle.h forme.h
 	g++ -c cercle.cpp
 
 clean:

@@ -13,7 +13,7 @@
 #include <iostream>
 #include "forme.h"
 #include "couche.h"
-#include "rectangle.h"
+//#include "rectangle.h"
 const int MAX_COUCHES = 5;
 
 using namespace std;
