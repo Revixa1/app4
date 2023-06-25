@@ -55,19 +55,20 @@ void Tests::tests_unitaires_cercle()
 
 void Tests::tests_unitaires_vecteur()
 {
-   int Max= 4;
-   int iMax =7;
+   int Max= 10;
+   
    Vecteur *TestDeVecteur=new Vecteur;
+   Forme *pointCarre = new Carre();
    int gettaillemax = TestDeVecteur->getMax();
    cout << "get max initialle:"<<gettaillemax<<endl;
    int gettailleactuelle = TestDeVecteur->getTailleActuelle();
    cout << "get taille actuelle initialle:"<<gettailleactuelle<<endl;
-   TestDeVecteur->setMax(Max);
-   int maxAvecSet = TestDeVecteur->getMax();
-   cout << "set max :"<<maxAvecSet<<endl;
+   //TestDeVecteur->setMax(Max);
+   //int maxAvecSet = TestDeVecteur->getMax();
+   //cout << "set max :"<<maxAvecSet<<endl;
 //==============================
-   
-
+   TestDeVecteur->addFormeEnd(pointCarre);
+cout << "allo maman"<<endl;
 }
 
 void Tests::tests_unitaires_couche()

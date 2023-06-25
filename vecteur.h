@@ -17,7 +17,7 @@ public:
 	Vecteur();
     void doublerMax();
 
-    void setMax(int tailleMaxIn);
+    //void setMax(int tailleMaxIn);
     int getMax();
 
     int getTailleActuelle();

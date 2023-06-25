@@ -4,24 +4,22 @@ using namespace std;
 
 Vecteur::Vecteur()
 {
-    tailleMax=1;
+    tailleMax=2;
     tailleActuelle=0;
-    Forme  **tableau1 = new Forme*[tailleMax];
+    tableau = new Forme*[tailleMax];
     
 }
 
 void Vecteur::doublerMax()
 {
+    cout << "allo alexi"<<endl;
     int newTailleMax=2*tailleMax;
     Forme **newTableau=new Forme*[newTailleMax];
 
-    for (int i=0; i<=newTailleMax; i++)
+    for (int i=0; i<newTailleMax; i++)
     {
-        if(i<=tailleMax)
+        if(i<tailleMax)
             {newTableau[i]=tableau[i];}
-      //  else
-      //      {newTableau[i]=NULL;}
- 
     } 
 
     delete [] tableau;
@@ -33,10 +31,10 @@ void Vecteur::doublerMax()
 }
 
 
-void Vecteur::setMax(int tailleMaximumIn)
-{
-    tailleMax=tailleMaximumIn;
-}
+//void Vecteur::setMax(int tailleMaximumIn)
+//{
+//    tailleMax=tailleMaximumIn;
+//}
 
 
 int Vecteur::getMax()
@@ -75,14 +73,17 @@ bool Vecteur::cleanCheckup()
 
 bool  Vecteur::addFormeEnd(Forme *pasRapport )
 {
-    tailleActuelle++;  
-    Forme **newTableau=new Forme*[tailleActuelle];
-
     if (tailleActuelle >= tailleMax )
     {doublerMax();}
+      
+
+    cout << "allo alex"<< tailleActuelle << tailleMax<<endl;
+    cout<<getForme(0)<<endl;
 
     tableau[tailleActuelle]=pasRapport;
 
+cout << "allo tx"<<endl;
+tailleActuelle++;
     return 1;
 }
 
