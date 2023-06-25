@@ -1,12 +1,13 @@
 #ifndef CARRE_H
 #define CARRE_H
 #include <iostream>
+#include "rectangle.h"
 #include "forme.h"
 
 using namespace std;
 
 
-class Carre:public Forme
+class Carre:public Rectangle
 {
 private:
 	int taille;
