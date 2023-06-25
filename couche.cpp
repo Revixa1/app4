@@ -54,12 +54,12 @@ double Couche::aireTotale()
 
     for(int i=0;i<vec.tailleMax;i++ )
     {
-        ptrForme=vec.getForme(indexeIn);
+        ptrForme=vec.getForme(i);
         Atot+=ptrForme->aire();
 
     }
 
-
+    delete ptrForme;
     return Atot;
 }
 
@@ -69,6 +69,9 @@ bool Couche::translaterCouche(int Dx, int Dy)
 
     return true;
 }
+
+
+
 bool Couche::initCouche()
 {
 
