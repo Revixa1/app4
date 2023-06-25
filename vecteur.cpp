@@ -18,16 +18,17 @@ void Vecteur::doublerMax()
     for (int i=0; i<=newTailleMax; i++)
     {
         if(i<=tailleMax)
-            {newTableau[i]=tableau[i];}
-        else
-            {newTableau[i]=NULL;}
-        
-        tableau[i]=newTableau[i];
+            {newTableau[i]=&tableau[i];}
+      //  else
+      //      {newTableau[i]=NULL;}
+ 
     } 
 
+    delete [] tableau;
+    tableau =* newTableau;
     tailleMax=newTailleMax;
 
-    delete[]newTableau;
+  
 
 }
 
@@ -54,7 +55,7 @@ void Vecteur::cleanVecteur()
 {
     for (int i = 0; i<tailleMax;i++)
     {
-        tableau[i]=NULL;
+        delete&tableau[i];
     };
     tailleActuelle=0;
 }
