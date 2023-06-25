@@ -20,8 +20,8 @@ public:
 	int getHauteur();
 	int getLargeur();
 
-	double aire();
-	void afficher(ostream & s);
+	virtual double aire();
+	virtual void afficher(ostream & s);
 	~Rectangle();
 };
  #endif
