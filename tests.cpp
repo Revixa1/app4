@@ -21,20 +21,23 @@ void Tests::tests_unitaires_rectangle()
 {
    int hauteur=2;
    int largeur=3;
-   Rectangle *TestDeRectangle; 
+   Rectangle *TestDeRectangle = new Rectangle; 
    TestDeRectangle->setHauteur(hauteur);
    TestDeRectangle->setLargeur(largeur);
    int Hauteur = TestDeRectangle->getHauteur();
    int Largeur = TestDeRectangle->getLargeur();
    cout << "hauteur : "<<Hauteur<< endl;
    cout << "Laugeur : "<<Largeur<< endl;
+
+
+
 }
 
 void Tests::tests_unitaires_carre()
 {
    int tailleTest=2;
   
-   Carre *TestDeCarre; 
+   Carre *TestDeCarre = new Carre; 
    TestDeCarre->setTaille(tailleTest);
    int Taille=TestDeCarre->getTaille();
    cout << "taille :"<<Taille<<endl;
@@ -44,7 +47,7 @@ void Tests::tests_unitaires_cercle()
 {
    int rayonTest=2;
   
-   Cercle *TestDeCercle; 
+   Cercle *TestDeCercle=new Cercle; 
    TestDeCercle->setRayon(rayonTest);
    int Rayon=TestDeCercle->getRayon();
    cout << "rayon :"<<Rayon<<endl;
@@ -52,7 +55,32 @@ void Tests::tests_unitaires_cercle()
 
 void Tests::tests_unitaires_vecteur()
 {
+   int Max= 12;
+   int iMax =7;
+   Vecteur *TestDeVecteur=new Vecteur;
+   int gettaillemax = TestDeVecteur->getMax();
+   cout << "get max initialle:"<<gettaillemax<<endl;
+   int gettailleactuelle = TestDeVecteur->getTailleActuelle();
+   cout << "get taille actuelle initialle:"<<gettailleactuelle<<endl;
+   TestDeVecteur->setMax(Max);
+   int maxAvecSet = TestDeVecteur->getMax();
+   cout << "set max :"<<maxAvecSet<<endl;
+
+
+
    // Tests sur la classe Vecteur
+   cout << "addforme :"<<endl;
+
+   for (int i=0; i<=iMax;i++)
+   {
+      TestDeVecteur->addFormeEnd(i);
+   }
+   
+   for (int i=0;i<=iMax;i++)
+   {
+      int afficheCa = TestDeVecteur->getForme(i); 
+      cout<< afficheCa<<endl;
+   }
 }
 
 void Tests::tests_unitaires_couche()
