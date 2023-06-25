@@ -5,7 +5,7 @@
 #	la distribution de Graphicus.
 #
 
-graphicus-02: graphicus-02.o tests.o canevas.o couche.o forme.o rectangle.o carre.o cercle.o
+graphicus-02: graphicus-02.o tests.o canevas.o couche.o forme.o rectangle.o carre.o cercle.o vecteur.o
 	g++ -o graphicus-02 graphicus-02.o tests.o canevas.o couche.o forme.o rectangle.o carre.o cercle.o
 
 graphicus-02.o: graphicus-02.cpp tests.h

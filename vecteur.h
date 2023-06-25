@@ -1,6 +1,7 @@
 #ifndef VECTEUR_H
 #define VECTEUR_H
 #include <iostream>
+#include "forme.h"
 
 using namespace std;
 
@@ -10,12 +11,12 @@ class Vecteur
 private:
     int tailleMax;
     int tailleActuelle;
-    int vecteur[tailleMax];
+    int tableau[1];
 public:
 	Vecteur();
     void doublerMax();
 
-    void setMax(tailleMax);
+    void setMax(int tailleMaxIn);
     int getMax();
 
     int getTailleActuelle();

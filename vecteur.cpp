@@ -13,9 +13,9 @@ void Vecteur::doublerMax()
     tailleMax=2*tailleMax;
 }
 
-void Vecteur::setMax(int tailleMaximum)
+void Vecteur::setMax(int tailleMaximumIn)
 {
-    tailleMax=tailleMaximum;
+    tailleMax=tailleMaximumIn;
 }
 
 int Vecteur::getMax()
@@ -57,7 +57,11 @@ bool Vecteur::cleanCheckup()
 }
 
 
+Vecteur::~Vecteur()
+{
 
+    
+}
 
 
 

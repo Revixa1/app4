@@ -17,6 +17,7 @@ int main()
    Tests TestRectangle ;
    Tests TestCarre;
    Tests TestCercle;
+   Vecteur vec;
    tests.tests_application();
    cout<< " ~~RECTANGLE"<< endl;
    TestRectangle.tests_unitaires_rectangle();
