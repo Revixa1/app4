@@ -34,5 +34,8 @@ carre.o: carre.cpp carre.h
 cercle.o: cercle.cpp cercle.h
 	g++ -c cercle.cpp
 
+cercle.o: cercle.cpp cercle.h forme.h
+	g++ -c cercle.cpp
+
 clean:
 	rm  -f *.o

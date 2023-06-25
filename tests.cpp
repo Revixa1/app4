@@ -12,6 +12,9 @@
 void Tests::tests_unitaires_formes()
 {
    // Tests sur les formes geometriques
+   
+   
+   //cerc.afficher();
 }
 
 void Tests::tests_unitaires_rectangle()

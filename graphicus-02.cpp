@@ -8,6 +8,7 @@
 #include "tests.h"
 #include "rectangle.h"
 #include "forme.h"
+#include "cercle.h"
 using namespace std;
 
 int main()
