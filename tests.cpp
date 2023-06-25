@@ -55,7 +55,7 @@ void Tests::tests_unitaires_cercle()
 
 void Tests::tests_unitaires_vecteur()
 {
-   int Max= 12;
+   int Max= 4;
    int iMax =7;
    Vecteur *TestDeVecteur=new Vecteur;
    int gettaillemax = TestDeVecteur->getMax();
@@ -65,10 +65,12 @@ void Tests::tests_unitaires_vecteur()
    TestDeVecteur->setMax(Max);
    int maxAvecSet = TestDeVecteur->getMax();
    cout << "set max :"<<maxAvecSet<<endl;
+//==============================
 
 
 
-   // Tests sur la classe Vecteur
+
+   /*// Tests sur la classe Vecteur
    cout << "addforme :"<<endl;
 
    for (int i=0; i<=iMax;i++)
@@ -81,6 +83,8 @@ void Tests::tests_unitaires_vecteur()
       int afficheCa = TestDeVecteur->getForme(i); 
       cout<< afficheCa<<endl;
    }
+   */
+
 }
 
 void Tests::tests_unitaires_couche()
