@@ -66,24 +66,7 @@ void Tests::tests_unitaires_vecteur()
    int maxAvecSet = TestDeVecteur->getMax();
    cout << "set max :"<<maxAvecSet<<endl;
 //==============================
-
-
-
-
-   /*// Tests sur la classe Vecteur
-   cout << "addforme :"<<endl;
-
-   for (int i=0; i<=iMax;i++)
-   {
-      TestDeVecteur->addFormeEnd(i);
-   }
    
-   for (int i=0;i<=iMax;i++)
-   {
-      int afficheCa = TestDeVecteur->getForme(i); 
-      cout<< afficheCa<<endl;
-   }
-   */
 
 }
 
