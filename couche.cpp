@@ -29,16 +29,16 @@ Couche::~Couche()
 
 
 
-bool Couche::ajouterForme()
+bool Couche::ajouterForme(Forme *uneFormeIn)
 {
-
+    vec.addFormeEnd(uneFormeIn);
     return true;
 }
 
 
 int Couche::retirerForme(int indexeIn)
 {
-
+    //vec.
     return indexeIn;
 }
 int Couche::obtenirForme(int indexeIn)

@@ -23,7 +23,7 @@ class Couche
       ~Couche();
 
 
-      bool ajouterForme();
+      bool ajouterForme(Forme*);
       int retirerForme(int indexeIn);
       int obtenirForme(int indexeIn);
       double aireTotale();
@@ -36,9 +36,9 @@ class Couche
       bool initialise;
       bool active;
       bool inactive;
+      Vecteur vec;
       
-Forme *formes= new Carre;      
-Forme *tabFormes[1]={formes};
+   
 
 
 };
