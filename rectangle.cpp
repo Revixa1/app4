@@ -2,6 +2,22 @@
 
 using namespace std;
 
+
+Rectangle::Rectangle(int hauteurIn , int largeurIn , int xcoords, int ycoords)
+{
+    hauteur=hauteurIn;
+    largeur=largeurIn;
+
+    ancrage.x=xcoords;
+    ancrage.y=ycoords;
+}
+
+Rectangle::~Rectangle()
+{
+
+
+}
+
 void Rectangle::setHauteur(int Hauteur) 
 {   
     hauteur=Hauteur;
@@ -25,5 +41,18 @@ int Rectangle::getLargeur()
 {
     cout<< "getLargeur"<< endl;
     return largeur;
+}
+
+double Rectangle::aire()
+{
+    double A=hauteur*largeur;
+    return A;
+
+}
+
+void Rectangle::afficher(ostream & s)
+{
+
+
 }
 

@@ -4,11 +4,12 @@ using namespace std;
 
 
 
-Cercle::Cercle(double r, int xcoords, int ycoords){
+Cercle::Cercle(double r, int xcoords, int ycoords)
+{
 
-rayon= r;
-ancrage.x=xcoords;
-ancrage.y=ycoords;
+    rayon= r;
+    ancrage.x=xcoords;
+    ancrage.y=ycoords;
 
 
 }

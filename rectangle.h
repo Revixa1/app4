@@ -8,20 +8,23 @@ using namespace std;
 
 class Rectangle:public Forme
 {
-private:
-	int hauteur;
-	int largeur;
+
 public:
-	Rectangle();
-	Rectangle(int hauteur , int largeur , Coordonnee);
-	void setHauteur(int hauteur);
-	void setLargeur(int largeur);
+	
+	Rectangle(int hauteurIn=1 , int largeurIn=1 , int xcoords=0, int ycoords=0);
+	~Rectangle();
+	void setHauteur(int hauteurIn);
+	void setLargeur(int largeurIn);
 
 	int getHauteur();
 	int getLargeur();
 
 	virtual double aire();
 	virtual void afficher(ostream & s);
-	~Rectangle();
+
+private:
+	int hauteur;
+	int largeur;
+	
 };
- #endif
+#endif

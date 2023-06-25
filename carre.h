@@ -12,14 +12,16 @@ class Carre:public Rectangle
 private:
 	int taille;
 public:
-	Carre();
-	Carre(int taille, Coordonnee);
+	
+	Carre(int TailleIn=1 , int xcoords=0, int ycoords=0);
+	~Carre();
 
-	void setTaille(int taille);
+
+	void setTaille(int tailleIn);
 	int getTaille();
 
 	double aire();
 	void afficher(ostream & s);
-	~Carre();
+	
 };
  #endif
