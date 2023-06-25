@@ -7,7 +7,6 @@ Vecteur::Vecteur()
     tailleMax=2;
     tailleActuelle=0;
     tableau = new Forme*[tailleMax];
-    
 }
 
 void Vecteur::doublerMax()
@@ -29,12 +28,6 @@ void Vecteur::doublerMax()
   
 
 }
-
-
-//void Vecteur::setMax(int tailleMaximumIn)
-//{
-//    tailleMax=tailleMaximumIn;
-//}
 
 
 int Vecteur::getMax()
@@ -87,7 +80,11 @@ tailleActuelle++;
     return 1;
 }
 
+bool pizzaForme(int indice)
+{
+tableau[indice]=NULL;
 
+}
 Forme* Vecteur::getForme(int position)
 {
     return tableau[position];
