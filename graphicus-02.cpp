@@ -8,8 +8,6 @@
 #include "tests.h"
 #include "rectangle.h"
 #include "forme.h"
-
-
 using namespace std;
 
 int main()
@@ -17,10 +15,13 @@ int main()
    Tests tests;
    Tests TestRectangle ;
    Tests TestCarre;
+   Tests TestCercle;
    tests.tests_application();
    cout<< " ~~RECTANGLE"<< endl;
    TestRectangle.tests_unitaires_rectangle();
    cout << "  ~~CARRE" <<endl;
    TestCarre.tests_unitaires_carre();
+   cout << "  ~~CERCLE" <<endl;
+   TestCercle.tests_unitaires_cercle();
    return 0;
 }  

@@ -37,6 +37,16 @@ void Tests::tests_unitaires_carre()
    cout << "taille :"<<Taille<<endl;
 }
 
+void Tests::tests_unitaires_cercle()
+{
+   int rayonTest=2;
+  
+   Cercle *TestDeCercle; 
+   TestDeCercle->setRayon(rayonTest);
+   int Rayon=TestDeCercle->getRayon();
+   cout << "rayon :"<<Rayon<<endl;
+}
+
 void Tests::tests_unitaires_vecteur()
 {
    // Tests sur la classe Vecteur
