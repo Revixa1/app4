@@ -23,6 +23,9 @@ public:
     void cleanVecteur();
 
     bool cleanCheckup();
+
+    int getForme(int position);
+    bool addFormeEnd(int forme);
 	~Vecteur();
 };
  #endif

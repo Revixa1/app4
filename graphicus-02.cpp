@@ -25,5 +25,9 @@ int main()
    TestCarre.tests_unitaires_carre();
    cout << "  ~~CERCLE" <<endl;
    TestCercle.tests_unitaires_cercle();
+   cout << "  ~~VECTEUR" <<endl;
+   TestCercle.tests_unitaires_vecteur();
+
+
    return 0;
 }  
