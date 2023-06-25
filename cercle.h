@@ -9,13 +9,12 @@ using namespace std;
 
 class Cercle:public Forme
 {
-private:
-	int rayon;
-public:
-	Cercle(double rayon=1, int xcoords=0, int ycoords=0);
-    ~Cercle();
 
-	void setRayon(int taille);
+public:
+	Cercle(double r=1, int xcoords=0, int ycoords=0);
+    
+
+	void setRayon(double taille);
 	int getRayon();
 
     
@@ -23,8 +22,9 @@ public:
     void afficher(ostream & s);
 
 private:
-    double r;
+     
+    double rayon;
 	
 };
- #endif
+#endif
 
