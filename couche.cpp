@@ -29,37 +29,37 @@ Couche::~Couche()
 
 
 
-bool ajouterForme()
+bool Couche::ajouterForme()
 {
 
 
 }
 
 
-int retirerForme(int indexeIn)
+int Couche::retirerForme(int indexeIn)
 {
 
 
 }
-int obtenirForme(int indexeIn)
+int Couche::obtenirForme(int indexeIn)
 {
 
 }
-double aireTotale()
+double Couche::aireTotale()
 {
 
 }
-bool translaterCouche(int Dx, int Dy)
+bool Couche::translaterCouche(int Dx, int Dy)
 {
 
 }
-bool initCouche()
+bool Couche::initCouche()
 {
 
 }
 
 
-bool setEtatCouche(int EtatIn)
+bool Couche::setEtatCouche(int EtatIn)
 {
     if(EtatIn==0)
     {
