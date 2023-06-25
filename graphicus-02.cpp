@@ -6,14 +6,21 @@
  *    fichier fait partie de la distribution de Graphicus.
 ********/
 #include "tests.h"
-
+#include "cercle.h"
 using namespace std;
 
 int main()
 {
    Tests tests;
+   Cercle cerc(2,0,2);
+
+   cerc.aire();
+
+   Coordonnee coolcoords;
+   coolcoords= cerc.getAncrage();
    
-   tests.tests_application();
+   cout<< coolcoords.x << ' ' << coolcoords.y <<endl;
+  // tests.tests_application();
    return 0;
 }
 

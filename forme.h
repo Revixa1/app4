@@ -9,9 +9,11 @@
 
 #ifndef FORME_H
 #define FORME_H
+#define PI 3.141592
 
 #include <iostream>
 #include "coordonnee.h"
+
 
 using namespace std;
 
