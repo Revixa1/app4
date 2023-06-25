@@ -18,7 +18,7 @@ canevas.o: canevas.cpp canevas.h
 	g++ -c canevas.cpp
 
 
-couche.o: couche.cpp couche.h
+couche.o: couche.cpp couche.h vecteur.h
 	g++ -c couche.cpp
 
 forme.o: forme.cpp forme.h
@@ -33,6 +33,9 @@ carre.o: carre.cpp carre.h rectangle.h
 
 cercle.o: cercle.cpp cercle.h
 	g++ -c cercle.cpp
+
+vecteur.o: vecteur.cpp vecteur.h
+	g++ -c vecteur.cpp
 
 clean:
 	rm  -f *.o
