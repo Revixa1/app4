@@ -13,6 +13,8 @@
 #include "vecteur.h"
 #include "forme.h"
 #include "rectangle.h"
+#include "carre.h"
+#include "cercle.h"
 class Couche
 {
    // Classe a completer
@@ -35,8 +37,8 @@ class Couche
       bool active;
       bool inactive;
       
-     
-
+Forme *formes= new Carre;      
+Forme *tabFormes[1]={formes};
 
 
 };
