@@ -81,10 +81,15 @@ void Tests::tests_unitaires_vecteur()
    cout << "adresse forme 3 "<<TestDeVecteur->getForme(3)<<endl;
 
    cout<< "  ~~Ajout de forme dans le vecteur"<<endl;
+   cout << "get taille actuelle:"<<TestDeVecteur->getTailleActuelle()<<endl;
    TestDeVecteur->addFormeEnd(pointCercle);
+   cout << "get taille actuelle:"<<TestDeVecteur->getTailleActuelle()<<endl;
    TestDeVecteur->addFormeEnd(pointCarre);
+   cout << "get taille actuelle:"<<TestDeVecteur->getTailleActuelle()<<endl;
    TestDeVecteur->addFormeEnd(point2Carre);
+   cout << "get taille actuelle:"<<TestDeVecteur->getTailleActuelle()<<endl;
    TestDeVecteur->addFormeEnd(pointRectangle);
+   cout << "get taille actuelle:"<<TestDeVecteur->getTailleActuelle()<<endl;
 
       cout<< "  ~~Verivication new adresse dans vecteur."<<endl;
    cout<< "verceur vide="<<TestDeVecteur->cleanCheckup()<<endl;

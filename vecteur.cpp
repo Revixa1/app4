@@ -100,7 +100,7 @@ Forme* Vecteur::suppForme(int indice)
 
 Forme* Vecteur::getForme(int position) const
 {
-    if (position < tailleActuelle && position > 0)
+    if (position < tailleActuelle && position >= 0)
     {
         return tableau[position];
     }
