@@ -39,13 +39,22 @@ bool Canevas::reinitialiser()
 
 bool Canevas::activerCouche(int index)
 {
-
+   couches[index].setEtatCouche(1);
    return true;
 }
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
-   return true;
+   for (int i=0 ; i<MAX_COUCHES ; i++ )
+   {
+      if (couches[i].getEtatCouche()==1)
+      {
+         couche[i].ajouterForme(*p_forme);
+         return true;
+      }
+   }
+   cout<<"Aucune couche n'est active."<,endl;
+   return false;
 }
 
 bool Canevas::retirerForme(int index)
