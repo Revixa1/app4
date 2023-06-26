@@ -78,14 +78,33 @@ bool Canevas::retirerForme(int index)
 
 double Canevas::aire()
 {
-   return 0.0;
+   double airTot=0.0;
+   for (int i=0 ; i<MAX_COUCHES ; i++ )
+   {
+      airTot=airTot+couches[i].aireTotale();
+   }
+   return airTot;
 }
 
 bool Canevas::translater(int deltaX, int deltaY)
 {
-   return true;
+   for (int i=0 ; i<MAX_COUCHES ; i++ )
+   {
+      if (couches[i].getEtatCouche()==1)
+      {
+         couches[i].translaterCouche(deltaX , deltaY);
+         return true;
+      }
+   }
+   cout<<"Aucune couche n'est active."<<endl; 
+   return false;
 }
 
 void Canevas::afficher(ostream & s)
 {
+   for (int i=0 ; i<MAX_COUCHES ; i++ )
+   {
+      cout<<"----- Couche "<<i<<endl;
+      couches[i].afficherCouche(s);
+   }
 }

@@ -187,11 +187,19 @@ void Tests::tests_unitaires_couche()
    
    cout<< "Faire l'affichage de la couche"<<endl;
    TestDeCouche->afficherCouche(cout);
+
 }
 
 void Tests::tests_unitaires_canevas()
 {
-   // Tests sur la classe Canevas
+   cout<<"tests canevas ici ____________________"<<endl;
+   Carre *TestDeCarre = new Carre; 
+   Cercle *TestDeCercle=new Cercle; 
+   Canevas *testDeCanevas= new Canevas;
+   //testDeCanevas->activerCouche(1);
+   testDeCanevas->ajouterForme(TestDeCarre);
+   testDeCanevas->ajouterForme(TestDeCercle);
+   testDeCanevas->afficher(cout);
 }
 
 void Tests::tests_unitaires()
