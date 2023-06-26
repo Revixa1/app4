@@ -9,7 +9,8 @@
 #include "canevas.h"
 
 Canevas::Canevas()
-{
+{    
+   monCanevas = new Vecteur[MAX_COUCHES];
 }
 
 Canevas::~Canevas()
@@ -18,6 +19,8 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
+   delete[] monCanevas;
+   Canevas();
    return true;
 }
 
