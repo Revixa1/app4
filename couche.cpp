@@ -39,31 +39,27 @@ bool Couche::ajouterForme(Forme *uneFormeIn)
 int Couche::retirerForme(int indexeIn)
 {
     vec.suppForme(indexeIn);
+     if(NULL!=vec.getForme(indexeIn)){return -1;}
+
     return indexeIn;
 }
 
 
 Forme* Couche::obtenirForme(int indexeIn)
 {
-    Forme *ptrForme;
-    ptrForme =vec.getForme(indexeIn);
-    return ptrForme;
+    if(NULL!=vec.getForme(indexeIn)){return vec.getForme(indexeIn);}
+    
 }
 
 
 double Couche::aireTotale()
 {
     double Atot=0;
-    Forme *ptrForme;
 
     for(int i=0;i<vec.getTailleActuelle();i++ )
     {
-        ptrForme=vec.getForme(i);
-        Atot+=ptrForme->aire();
-
+        if(NULL!=vec.getForme(i)){Atot+=vec.getForme(i)->aire();}
     }
-
-    delete ptrForme;
     return Atot;
 }
 
@@ -73,7 +69,7 @@ bool Couche::translaterCouche(int Dx, int Dy)
     for(int i=0;i<vec.getTailleActuelle();i++ )
     {
 
-        if(NULL!=vec.getForme(i)){return false;}
+        if(NULL!=vec.getForme(i)){vec.getForme(i)->translater(Dx,Dy);}
        
     }
     return true;
