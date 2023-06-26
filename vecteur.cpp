@@ -100,7 +100,7 @@ Forme* Vecteur::getForme(int position)
 
 void Vecteur::afficher(ostream & s)
 {
-    Forme *ptrForme;
+    
     
 
     for(int i=0;i<getTailleActuelle();i++ )
@@ -111,11 +111,10 @@ void Vecteur::afficher(ostream & s)
         }
         else
         {
-            ptrForme=getForme(i);
-            ptrForme->afficher(s);
+            getForme(i)->afficher(s);
         }
     }
-    delete ptrForme;
+    
 }
 
 

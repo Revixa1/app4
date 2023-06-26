@@ -30,6 +30,7 @@ class Couche
       bool translaterCouche(int Dx, int Dy);
       bool initCouche();
       bool setEtatCouche(int EtatIn);
+      int getEtatCouche() const;
       void afficherCouche(ostream & s);
 
    private:

@@ -131,6 +131,24 @@ bool Couche::setEtatCouche(int EtatIn)
     return true;
 }
 
+
+int Couche::getEtatCouche() const
+{
+
+    if(initialise==1)
+    {
+        return 0;
+    } else if(active==1)
+    {
+        return 1;
+    } else if(inactive==1)
+    {
+        return 2;
+    }
+    
+    return -1;
+}
+
 void Couche::afficherCouche(ostream & s)
 {
     if(initialise==true){
