@@ -10,7 +10,6 @@
 
 Canevas::Canevas()
 {    
-   //*couches = new Couche[MAX_COUCHES];
    for ( int i =0; i<MAX_COUCHES; i++)
    {
       if ( i==0)
@@ -28,11 +27,12 @@ Canevas::Canevas()
 
 Canevas::~Canevas()
 {
+
 }
 
 bool Canevas::reinitialiser()
 {
-   delete[] couches;
+   delete & couches;
    Canevas();
    return true;
 }
@@ -49,17 +49,31 @@ bool Canevas::ajouterForme(Forme *p_forme)
    {
       if (couches[i].getEtatCouche()==1)
       {
-         couche[i].ajouterForme(*p_forme);
+         couches[i].ajouterForme(p_forme);
          return true;
       }
    }
-   cout<<"Aucune couche n'est active."<,endl;
+   cout<<"Aucune couche n'est active."<<endl;
    return false;
 }
 
 bool Canevas::retirerForme(int index)
 {
-   return true;
+   for (int i=0 ; i<MAX_COUCHES ; i++ )
+   {
+      if (couches[i].getEtatCouche()==1)
+      {
+         couches[i].retirerForme(index);
+         if (couches[i].retirerForme(index)==-1)
+         {
+            return false;
+         }
+         else 
+         {return true;}
+      }
+   }
+   cout<<"Aucune couche n'est active."<<endl;
+   return false;
 }
 
 double Canevas::aire()
