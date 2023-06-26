@@ -28,6 +28,8 @@ public:
     Forme* getForme(int position);
     bool addFormeEnd(Forme *nomDeVAriable);
     Forme* suppForme(int indice);
+    void afficher();
+    //void pourAfficher(ostream & s);
 	~Vecteur();
 };
  #endif
