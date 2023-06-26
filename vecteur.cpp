@@ -44,6 +44,7 @@ void Vecteur::cleanVecteur()
     {
         tableau[i]=NULL;
     }
+    tailleActuelle=0;
 }
 
 
