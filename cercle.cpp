@@ -34,7 +34,6 @@ int Cercle::getRayon()
 double Cercle::aire()
 {
     double A=rayon*rayon*PI;
-    cout << A << endl;
 
     return A;
 }

@@ -14,21 +14,10 @@ using namespace std;
 int main()
 {  
    Tests tests;
-   Tests TestRectangle ;
-   Tests TestCarre;
-   Tests TestCercle;
-   Vecteur vec;
    tests.tests_application();
-   cout<< " ~~RECTANGLE"<< endl;
-   TestRectangle.tests_unitaires_rectangle();
-   cout << "  ~~CARRE" <<endl;
-   TestCarre.tests_unitaires_carre();
-   cout << "  ~~CERCLE" <<endl;
-   TestCercle.tests_unitaires_cercle();
-   cout << "  ~~VECTEUR" <<endl;
-   TestCercle.tests_unitaires_vecteur();
-   cout << "  ~~COUCHE" <<endl;
-   TestCercle.tests_unitaires_couche();
+   tests.tests_unitaires_formes();
+   tests.tests_unitaires_vecteur();
+   tests.tests_unitaires_couche();
 
 
    return 0;

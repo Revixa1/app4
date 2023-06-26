@@ -99,12 +99,6 @@ Forme* Vecteur::getForme(int position)
     }
 }
 
-/*void Vecteur::pourAfficher(ostream & s)
-{
- 
-    s<<"Forme (x="<<ancrage.x<<", y="<<ancrage.y<<", c="<<taille<<", aire="<<aire()<<")"<<endl;
-
-}*/
 
 void Vecteur::afficher()
 {
@@ -113,8 +107,15 @@ void Vecteur::afficher()
 
     for(int i=0;i<getTailleActuelle();i++ )
     {
-        ptrForme=getForme(i);
-        ptrForme->afficher(cout);
+        if (tableau[i]==NULL)
+        {
+            cout<< "Forme supprimee"<<endl;
+        }
+        else
+        {
+            ptrForme=getForme(i);
+            ptrForme->afficher(cout);
+        }
     }
 
 }
