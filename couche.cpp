@@ -12,12 +12,12 @@
 
 
 
-Couche::Couche(int numCoucheIn)
+Couche::Couche()
 {
     initialise=1;
     active=0;
     inactive=0;
-    numCouche=numCoucheIn;
+  
     
     
 
@@ -33,6 +33,10 @@ Couche::~Couche()
 
 bool Couche::ajouterForme(Forme *uneFormeIn)
 {
+    if(active!=true){
+        return false;
+    }
+
     vec.addFormeEnd(uneFormeIn);
     return true;
 }
@@ -40,6 +44,11 @@ bool Couche::ajouterForme(Forme *uneFormeIn)
 
 int Couche::retirerForme(int indexeIn)
 {
+
+    if(active!=true){
+        return -1;
+    }
+
     vec.suppForme(indexeIn);
      if(NULL!=vec.getForme(indexeIn)){return -1;}
 
@@ -58,6 +67,9 @@ Forme* Couche::obtenirForme(int indexeIn)
 double Couche::aireTotale()
 {
     double Atot=0;
+    if(initialise==true){
+        return 0;
+    }
 
     for(int i=0;i<vec.getTailleActuelle();i++ )
     {
@@ -69,6 +81,10 @@ double Couche::aireTotale()
 
 bool Couche::translaterCouche(int Dx, int Dy)
 {
+    if(active!=true){
+        return false;
+    }
+
     for(int i=0;i<vec.getTailleActuelle();i++ )
     {
 
@@ -90,28 +106,23 @@ bool Couche::initCouche()
         if(NULL!=vec.getForme(i)){return false;}
        
     }
-
+    Couche();
     return true;
 }
 
 
 bool Couche::setEtatCouche(int EtatIn)
 {
-    if(EtatIn==0)
+    if(EtatIn==1)
     {
-        initialise=1;
-        active=0;
-        inactive=0;
-    } else if(EtatIn==1)
-    {
-        initialise=0;
-        active=1;
-        inactive=0;
+        initialise=false;
+        active=true;
+        inactive=false;
     } else if(EtatIn==2)
     {
-        initialise=0;
-        active=0;
-        inactive=1;
+        initialise=false;
+        active=false;
+        inactive=true;
     } else 
     {
         return false;
@@ -122,5 +133,10 @@ bool Couche::setEtatCouche(int EtatIn)
 
 void Couche::afficherCouche(ostream & s)
 {
+    if(initialise==true){
+        s<<"Couche initialisee"<<endl;
+    }
+    else{
     vec.afficher(s);
+    }
 }

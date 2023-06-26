@@ -19,7 +19,7 @@ class Couche
 {
    // Classe a completer
    public:
-      Couche(int numCoucheIn=0);
+      Couche();
       ~Couche();
       int numCouche;
 

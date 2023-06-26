@@ -149,7 +149,8 @@ void Tests::tests_unitaires_couche()
    cout<< "Translater la couche"<<endl;
    cout << "Translation: "<<TestDeCouche->translaterCouche(10,5)<<endl;
 
-
+   cout<< "Faire l'affichage de la couche"<<endl;
+   TestDeCouche->afficherCouche(cout);
 
    cout<< "Set L'etat de la couche"<<endl;
    cout << "Seter l'etat= "<<TestDeCouche->setEtatCouche(1)<<endl;
