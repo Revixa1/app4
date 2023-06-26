@@ -10,15 +10,14 @@
 #include "tests.h"
 
 void Tests::tests_unitaires_formes()
-{
-   // Tests sur les formes geometriques
-   
-   
-   //cerc.afficher();
+{   
+tests_unitaires_carre();
+tests_unitaires_cercle();
+tests_unitaires_rectangle();
 }
 
 void Tests::tests_unitaires_rectangle()
-{
+{cout<< " ~~RECTANGLE"<< endl;
    int hauteur=2;
    int largeur=3;
    Rectangle *TestDeRectangle = new Rectangle; 
@@ -28,13 +27,10 @@ void Tests::tests_unitaires_rectangle()
    int Largeur = TestDeRectangle->getLargeur();
    cout << "hauteur : "<<Hauteur<< endl;
    cout << "Laugeur : "<<Largeur<< endl;
-
-
-
 }
 
 void Tests::tests_unitaires_carre()
-{
+{cout << "  ~~CARRE" <<endl;
    int tailleTest=2;
   
    Carre *TestDeCarre = new Carre; 
@@ -43,8 +39,9 @@ void Tests::tests_unitaires_carre()
    cout << "taille :"<<Taille<<endl;
 }
 
+
 void Tests::tests_unitaires_cercle()
-{
+{cout << "  ~~CERCLE" <<endl;
    int rayonTest=2;
   
    Cercle *TestDeCercle=new Cercle; 
@@ -53,8 +50,9 @@ void Tests::tests_unitaires_cercle()
    cout << "rayon :"<<Rayon<<endl;
 }
 
+
 void Tests::tests_unitaires_vecteur()
-{
+{cout << "  ~~VECTEUR" <<endl;
    int Max= 10;
    
    Vecteur *TestDeVecteur=new Vecteur;
@@ -69,34 +67,37 @@ void Tests::tests_unitaires_vecteur()
    cout << "get taille actuelle initialle:"<<gettailleactuelle<<endl;
 
 //==============================
-      cout <<"cleaning Vecteur..."<< endl;
+      cout <<"  ~~cleaning Vecteur..."<< endl;
    TestDeVecteur->cleanVecteur();
 
-      cout<< "Verivication adresse null dans vecteur."<<endl;
+      cout<< "  ~~Verivication adresse null dans vecteur."<<endl;
    cout << "adresse forme 1 "<<TestDeVecteur->getForme(0)<<endl;
    cout << "adresse forme 2 "<<TestDeVecteur->getForme(1)<<endl;
    cout << "adresse forme 3 "<<TestDeVecteur->getForme(2)<<endl;
    cout << "adresse forme 3 "<<TestDeVecteur->getForme(3)<<endl;
-   
-   cout<< "Ajout de forme dans le vecteur"<<endl;
+
+   cout<< "  ~~Ajout de forme dans le vecteur"<<endl;
    TestDeVecteur->addFormeEnd(pointCercle);
    TestDeVecteur->addFormeEnd(pointCarre);
    TestDeVecteur->addFormeEnd(point2Carre);
    TestDeVecteur->addFormeEnd(pointRectangle);
 
-      cout<< "Verivication new adresse dans vecteur."<<endl;
+      cout<< "  ~~Verivication new adresse dans vecteur."<<endl;
    cout << "adresse forme 1 "<<TestDeVecteur->getForme(0)<<endl;
    cout << "adresse forme 2 "<<TestDeVecteur->getForme(1)<<endl;
    cout << "adresse forme 3 "<<TestDeVecteur->getForme(2)<<endl;
    cout << "adresse forme 4 "<<TestDeVecteur->getForme(3)<<endl;
 
       TestDeVecteur->suppForme(1);
-      cout<< "suppression forme 2"<<endl;
+      cout<< "  ~~Suppression forme 2"<<endl;
    cout << "adresse forme 1 "<<TestDeVecteur->getForme(0)<<endl;
    cout << "adresse forme 2 "<<TestDeVecteur->getForme(1)<<endl;
    cout << "adresse forme 3 "<<TestDeVecteur->getForme(2)<<endl;
    cout << "adresse forme 4 "<<TestDeVecteur->getForme(3)<<endl;
-   
+
+//============================
+      cout<< "  ~~Test d'affichage de forme"<<endl; 
+   TestDeVecteur->afficher();
 }
 
 void Tests::tests_unitaires_couche()
