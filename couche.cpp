@@ -48,6 +48,7 @@ int Couche::retirerForme(int indexeIn)
 Forme* Couche::obtenirForme(int indexeIn)
 {
     if(NULL!=vec.getForme(indexeIn)){return vec.getForme(indexeIn);}
+    else{return NULL;}
     
 }
 

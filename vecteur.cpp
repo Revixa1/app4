@@ -40,13 +40,10 @@ int Vecteur::getTailleActuelle()
 
 void Vecteur::cleanVecteur()
 {
-    for (int i = 0; i<=tailleMax;i++)
+    for (int i = 0; i<tailleMax;i++)
     {
-        delete tableau[i];
+        tableau[i]=NULL;
     }
-
-    delete[] tableau;
-    Vecteur();
 }
 
 
