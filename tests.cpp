@@ -59,16 +59,36 @@ void Tests::tests_unitaires_vecteur()
    
    Vecteur *TestDeVecteur=new Vecteur;
    Forme *pointCarre = new Carre();
+   Forme *pointCercle = new Cercle();
+   Forme *pointRectangle = new Rectangle();
+   Forme *point2Carre = new Carre();
+
    int gettaillemax = TestDeVecteur->getMax();
    cout << "get max initialle:"<<gettaillemax<<endl;
    int gettailleactuelle = TestDeVecteur->getTailleActuelle();
    cout << "get taille actuelle initialle:"<<gettailleactuelle<<endl;
-   //TestDeVecteur->setMax(Max);
-   //int maxAvecSet = TestDeVecteur->getMax();
-   //cout << "set max :"<<maxAvecSet<<endl;
+
 //==============================
+cout <<"cleaning Vecteur..."<< endl;
+TestDeVecteur->cleanVecteur();
+
+
+   cout<< "Verivication adresse null dans vecteur."<<endl;
+   cout << "adresse forme 1 "<<TestDeVecteur->getForme(0)<<endl;
+   cout << "adresse forme 2 "<<TestDeVecteur->getForme(1)<<endl;
+   cout << "adresse forme 3 "<<TestDeVecteur->getForme(2)<<endl;
+   cout << "adresse forme 3 "<<TestDeVecteur->getForme(3)<<endl;
+   cout<< "Ajout de forme dans le vecteur"<<endl;
+   TestDeVecteur->addFormeEnd(pointCercle);
    TestDeVecteur->addFormeEnd(pointCarre);
-cout << "allo maman"<<endl;
+   TestDeVecteur->addFormeEnd(point2Carre);
+   TestDeVecteur->addFormeEnd(pointRectangle);
+      cout<< "Verivication new adresse dans vecteur."<<endl;
+   cout << "adresse forme 1 "<<TestDeVecteur->getForme(0)<<endl;
+   cout << "adresse forme 2 "<<TestDeVecteur->getForme(1)<<endl;
+   cout << "adresse forme 3 "<<TestDeVecteur->getForme(2)<<endl;
+   cout << "adresse forme 4 "<<TestDeVecteur->getForme(3)<<endl;
+   
 }
 
 void Tests::tests_unitaires_couche()

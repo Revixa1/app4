@@ -11,7 +11,6 @@ Vecteur::Vecteur()
 
 void Vecteur::doublerMax()
 {
-    cout << "allo alexi"<<endl;
     int newTailleMax=2*tailleMax;
     Forme **newTableau=new Forme*[newTailleMax];
 
@@ -24,9 +23,6 @@ void Vecteur::doublerMax()
     delete [] tableau;
     tableau = newTableau;
     tailleMax=newTailleMax;
-
-  
-
 }
 
 
@@ -44,23 +40,22 @@ int Vecteur::getTailleActuelle()
 
 void Vecteur::cleanVecteur()
 {
-    for (int i = 0; i<tailleMax;i++)
+    for (int i = 0; i<=tailleMax;i++)
     {
-        delete&tableau[i];
-    };
-    tailleActuelle=0;
+        delete tableau[i];
+    }
+
+    delete[] tableau;
+    Vecteur();
 }
 
 
 bool Vecteur::cleanCheckup()
 {
     if (tailleActuelle=0)
-    {
-        return 1;
-    }
+    {return 1;}
     else 
     {return 0;}
-
 }
 
 
@@ -68,26 +63,32 @@ bool  Vecteur::addFormeEnd(Forme *pasRapport )
 {
     if (tailleActuelle >= tailleMax )
     {doublerMax();}
-      
-
-    cout << "allo alex"<< tailleActuelle << tailleMax<<endl;
-    cout<<getForme(0)<<endl;
 
     tableau[tailleActuelle]=pasRapport;
 
-cout << "allo tx"<<endl;
-tailleActuelle++;
+    tailleActuelle++;
     return 1;
 }
 
-bool pizzaForme(int indice)
+Forme* Vecteur::suppForme(int indice)
 {
-tableau[indice]=NULL;
-
+    Forme** tableauOut = new Forme*[1];
+    tableauOut[1] = tableau[indice];
+    delete&tableau[indice];
+    return tableauOut[1];
 }
+
+
 Forme* Vecteur::getForme(int position)
 {
-    return tableau[position];
+    if (position <= tailleActuelle)
+    {
+        return tableau[position];
+    }
+    else
+    {
+        return NULL;
+    }
 }
 
 

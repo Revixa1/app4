@@ -27,7 +27,7 @@ public:
 
     Forme* getForme(int position);
     bool addFormeEnd(Forme *nomDeVAriable);
-    bool pizzaForme(int indice);
+    Forme* suppForme(int indice);
 	~Vecteur();
 };
  #endif
