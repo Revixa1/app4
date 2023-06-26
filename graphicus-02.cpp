@@ -27,6 +27,8 @@ int main()
    TestCercle.tests_unitaires_cercle();
    cout << "  ~~VECTEUR" <<endl;
    TestCercle.tests_unitaires_vecteur();
+   cout << "  ~~COUCHE" <<endl;
+   TestCercle.tests_unitaires_couche();
 
 
    return 0;
