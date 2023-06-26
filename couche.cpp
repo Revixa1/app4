@@ -95,6 +95,18 @@ bool Couche::translaterCouche(int Dx, int Dy)
 }
 
 
+bool Couche::translaterForme(int indexeIn,int Dx, int Dy)
+{
+    if(active!=true){
+        return false;
+    }
+
+    if(NULL!=vec.getForme(indexeIn)){vec.getForme(indexeIn)->translater(Dx,Dy);} else{return false;}
+    
+    return true;
+}
+
+
 
 bool Couche::initCouche()
 {
@@ -158,3 +170,5 @@ void Couche::afficherCouche(ostream & s)
     vec.afficher(s);
     }
 }
+
+

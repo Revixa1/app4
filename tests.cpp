@@ -48,6 +48,9 @@ void Tests::tests_unitaires_cercle()
    TestDeCercle->setRayon(rayonTest);
    int Rayon=TestDeCercle->getRayon();
    cout << "rayon :"<<Rayon<<endl;
+   Forme *FormeCercle= new Cercle(2);
+   FormeCercle->translater(3,6);
+   FormeCercle->afficher(cout);
 }
 
 
@@ -184,6 +187,10 @@ void Tests::tests_unitaires_couche()
 
    cout<< "Translater la couche"<<endl;
    cout << "Translation: "<<TestDeCouche->translaterCouche(10,5)<<endl;
+
+   cout<< "Translater la forme1"<<endl;
+   (TestDeCouche->obtenirForme(0))->translater(2,30);
+   cout << "Translation: "<<endl;
    
    cout<< "Faire l'affichage de la couche"<<endl;
    TestDeCouche->afficherCouche(cout);

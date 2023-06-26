@@ -28,6 +28,7 @@ class Couche
       Forme* obtenirForme(int indexeIn);
       double aireTotale();
       bool translaterCouche(int Dx, int Dy);
+      bool translaterForme(int indexeIn,int Dx, int Dy);
       bool initCouche();
       bool setEtatCouche(int EtatIn);
       int getEtatCouche() const;
