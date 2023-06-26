@@ -7,6 +7,9 @@
  *    fait partie de la distribution de Graphicus.
 ********/
 
+#ifndef TEST_H
+#define TEST_H
+
 #include <iostream>
 #include "canevas.h"
 #include "forme.h"
@@ -34,3 +37,5 @@ public:
    void tests_application_cas_02();
    void tests_application(); // Appel de tous les tests applicatifs
 };
+
+#endif

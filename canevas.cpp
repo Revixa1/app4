@@ -64,7 +64,7 @@ bool Canevas::retirerForme(int index)
       if (couches[i].getEtatCouche()==1)
       {
          couches[i].retirerForme(index);
-         if (couches[i].retirerForme(index)==-1)
+         if (couches[i].retirerForme(index)==NULL)
          {
             return false;
          }

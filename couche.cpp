@@ -42,21 +42,21 @@ bool Couche::ajouterForme(Forme *uneFormeIn)
 }
 
 
-int Couche::retirerForme(int indexeIn)
+Forme* Couche::retirerForme(int indexeIn)
 {
-
+    Forme* ptrForme;
     if(active!=true){
-        return -1;
+        return NULL;
     }
 
-    vec.suppForme(indexeIn);
-     if(NULL!=vec.getForme(indexeIn)){return -1;}
+    ptrForme=vec.suppForme(indexeIn);
+    if(NULL!=vec.getForme(indexeIn)){return NULL;}
 
-    return indexeIn;
+    return ptrForme;
 }
 
 
-Forme* Couche::obtenirForme(int indexeIn)
+Forme* Couche::obtenirForme(int indexeIn) const
 {
     if(NULL!=vec.getForme(indexeIn)){return vec.getForme(indexeIn);}
     else{return NULL;}
@@ -112,7 +112,7 @@ bool Couche::initCouche()
 {
     vec.cleanVecteur();
 
-     for(int i=0;i<vec.getTailleActuelle();i++ )
+    for(int i=0;i<vec.getTailleActuelle();i++ )
     {
 
         if(NULL!=vec.getForme(i)){return false;}
@@ -167,7 +167,7 @@ void Couche::afficherCouche(ostream & s)
         s<<"Couche initialisee"<<endl;
     }
     else{
-    vec.afficher(s);
+        vec.afficher(s);
     }
 }
 

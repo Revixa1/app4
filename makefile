@@ -24,14 +24,14 @@ couche.o: couche.cpp couche.h vecteur.h
 forme.o: forme.cpp forme.h
 	g++ -c forme.cpp 
 
-rectangle.o: rectangle.cpp rectangle.h
+rectangle.o: rectangle.cpp rectangle.h forme.h
 	g++ -c rectangle.cpp
 
-carre.o: carre.cpp carre.h rectangle.h
+carre.o: carre.cpp carre.h rectangle.h forme.h
 	g++ -c carre.cpp
 
 
-cercle.o: cercle.cpp cercle.h
+cercle.o: cercle.cpp cercle.h forme.h
 	g++ -c cercle.cpp
 
 vecteur.o: vecteur.cpp vecteur.h

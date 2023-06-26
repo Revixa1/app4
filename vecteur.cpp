@@ -4,35 +4,35 @@ using namespace std;
 
 Vecteur::Vecteur()
 {
-    tailleMax=2;
+    tailleCapacite=2;
     tailleActuelle=0;
-    tableau = new Forme*[tailleMax];
+    tableau = new Forme*[tailleCapacite];
 }
 
-void Vecteur::doublerMax()
+void Vecteur::doublerCapacite()
 {
-    int newTailleMax=2*tailleMax;
-    Forme **newTableau=new Forme*[newTailleMax];
+    int newTailleCapacite=2*tailleCapacite;
+    Forme **newTableau=new Forme*[newTailleCapacite];
 
-    for (int i=0; i<newTailleMax; i++)
+    for (int i=0; i<newTailleCapacite; i++)
     {
-        if(i<tailleMax)
+        if(i<tailleCapacite)
             {newTableau[i]=tableau[i];}
     } 
 
     delete [] tableau;
     tableau = newTableau;
-    tailleMax=newTailleMax;
+    tailleCapacite=newTailleCapacite;
 }
 
 
-int Vecteur::getMax()
+int Vecteur::getCapacite() const
 {
-    return tailleMax;
+    return tailleCapacite;
 }
 
 
-int Vecteur::getTailleActuelle()
+int Vecteur::getTailleActuelle() const
 {
     return tailleActuelle;
 }
@@ -40,54 +40,67 @@ int Vecteur::getTailleActuelle()
 
 void Vecteur::cleanVecteur()
 {
-    for (int i = 0; i<tailleMax;i++)
+    for(int i=0;i<tailleCapacite;i++)
+    {
+        if(tableau[i]!=NULL){delete tableau[i];}
+    }
+    for (int i = 0; i<tailleCapacite;i++)
     {
         tableau[i]=NULL;
     }
     tailleActuelle=0;
+
 }
 
 
 bool Vecteur::cleanCheckup()
 {
-    if (tailleActuelle=0)
-    {return 1;}
-    else 
-    {return 0;}
+
+    for(int i=0;i<getTailleActuelle();i++)
+    {
+        if(NULL!=tableau[i]){return false;}
+    }
+    return true;
 }
 
 
-bool  Vecteur::addFormeEnd(Forme *pasRapport )
+bool  Vecteur::addFormeEnd(Forme *nouvelleForme )
 {
-    if (tailleActuelle >= tailleMax )
-    {doublerMax();}
+    if (tailleActuelle >= tailleCapacite )
+    {doublerCapacite();}
 
-    tableau[tailleActuelle]=pasRapport;
+    tableau[tailleActuelle]=nouvelleForme;
 
     tailleActuelle++;
-    return 1;
+    return true;
 }
 
 Forme* Vecteur::suppForme(int indice)
-{    if (indice <= tailleActuelle)
-    {    
-    Forme** tableauOut = new Forme*[1];
-    tableauOut[1] = tableau[indice];
+{    
+    if (indice >= tailleActuelle || indice < 0)
+    {  return NULL;  }
+
+    Forme* ptrForme;
+    ptrForme = tableau[indice];
+
+    /*
+    if(tableau[indice]!=NULL){
+        delete tableau[indice];
+    } else{
+        return NULL;
+    }*/
+
+
     tableau[indice]=NULL;
 
-    return tableauOut[1];
-    }
-    else
-    {
-        return NULL;
+    return ptrForme;
+
     }
 
-}
 
-
-Forme* Vecteur::getForme(int position)
+Forme* Vecteur::getForme(int position) const
 {
-    if (position <= tailleActuelle)
+    if (position < tailleActuelle && position > 0)
     {
         return tableau[position];
     }
@@ -120,6 +133,10 @@ void Vecteur::afficher(ostream & s)
 
 Vecteur::~Vecteur()
 {
+    for(int i=0;i<tailleCapacite;i++)
+    {
+        if(tableau[i]!=NULL){delete tableau[i];}
+    }
    
 }
 

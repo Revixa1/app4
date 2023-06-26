@@ -8,28 +8,24 @@ using namespace std;
 
 class Vecteur
 {
-private:
-    int tailleMax;
-    int tailleActuelle;
-    Forme **tableau;
+    private:
+        int tailleCapacite;
+        int tailleActuelle;
+        Forme* *tableau;
 
-public:
-	Vecteur();
-    void doublerMax();
+    public:
+    	Vecteur();
+        ~Vecteur();
 
-    //void setMax(int tailleMaxIn);
-    int getMax();
-
-    int getTailleActuelle();
-    void cleanVecteur();
-
-    bool cleanCheckup();
-
-    Forme* getForme(int position);
-    bool addFormeEnd(Forme *nomDeVAriable);
-    Forme* suppForme(int indice);
-    void afficher(ostream & s);
-    //void pourAfficher(ostream & s);
-	~Vecteur();
+        void doublerCapacite();
+        int getCapacite() const;
+        int getTailleActuelle() const;
+        void cleanVecteur();
+        bool cleanCheckup();
+        Forme* getForme(int position) const;
+        bool addFormeEnd(Forme *nomDeVAriable);
+        Forme* suppForme(int indice);
+        void afficher(ostream & s);
+    	
 };
  #endif

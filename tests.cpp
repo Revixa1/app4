@@ -64,7 +64,7 @@ void Tests::tests_unitaires_vecteur()
    Forme *pointRectangle = new Rectangle();
    Forme *point2Carre = new Carre();
 
-   int gettaillemax = TestDeVecteur->getMax();
+   int gettaillemax = TestDeVecteur->getCapacite();
    cout << "get max initialle:"<<gettaillemax<<endl;
    int gettailleactuelle = TestDeVecteur->getTailleActuelle();
    cout << "get taille actuelle initialle:"<<gettailleactuelle<<endl;
@@ -74,6 +74,7 @@ void Tests::tests_unitaires_vecteur()
    TestDeVecteur->cleanVecteur();
 
       cout<< "  ~~Verivication adresse null dans vecteur."<<endl;
+   cout<< "verceur vide="<<TestDeVecteur->cleanCheckup()<<endl;   
    cout << "adresse forme 1 "<<TestDeVecteur->getForme(0)<<endl;
    cout << "adresse forme 2 "<<TestDeVecteur->getForme(1)<<endl;
    cout << "adresse forme 3 "<<TestDeVecteur->getForme(2)<<endl;
@@ -86,6 +87,7 @@ void Tests::tests_unitaires_vecteur()
    TestDeVecteur->addFormeEnd(pointRectangle);
 
       cout<< "  ~~Verivication new adresse dans vecteur."<<endl;
+   cout<< "verceur vide="<<TestDeVecteur->cleanCheckup()<<endl;
    cout << "adresse forme 1 "<<TestDeVecteur->getForme(0)<<endl;
    cout << "adresse forme 2 "<<TestDeVecteur->getForme(1)<<endl;
    cout << "adresse forme 3 "<<TestDeVecteur->getForme(2)<<endl;
@@ -189,8 +191,8 @@ void Tests::tests_unitaires_couche()
    cout << "Translation: "<<TestDeCouche->translaterCouche(10,5)<<endl;
 
    cout<< "Translater la forme1"<<endl;
-   (TestDeCouche->obtenirForme(0))->translater(2,30);
-   cout << "Translation: "<<endl;
+   
+   cout << "Translation: "<< TestDeCouche->translaterForme(0,10,30)<<endl;
    
    cout<< "Faire l'affichage de la couche"<<endl;
    TestDeCouche->afficherCouche(cout);

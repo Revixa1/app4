@@ -21,11 +21,11 @@ class Couche
    public:
       Couche();
       ~Couche();
-      int numCouche;
+      
 
       bool ajouterForme(Forme*);
-      int retirerForme(int indexeIn);
-      Forme* obtenirForme(int indexeIn);
+      Forme* retirerForme(int indexeIn);
+      Forme* obtenirForme(int indexeIn) const;
       double aireTotale();
       bool translaterCouche(int Dx, int Dy);
       bool translaterForme(int indexeIn,int Dx, int Dy);
