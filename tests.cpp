@@ -69,21 +69,29 @@ void Tests::tests_unitaires_vecteur()
    cout << "get taille actuelle initialle:"<<gettailleactuelle<<endl;
 
 //==============================
-cout <<"cleaning Vecteur..."<< endl;
-TestDeVecteur->cleanVecteur();
+      cout <<"cleaning Vecteur..."<< endl;
+   TestDeVecteur->cleanVecteur();
 
-
-   cout<< "Verivication adresse null dans vecteur."<<endl;
+      cout<< "Verivication adresse null dans vecteur."<<endl;
    cout << "adresse forme 1 "<<TestDeVecteur->getForme(0)<<endl;
    cout << "adresse forme 2 "<<TestDeVecteur->getForme(1)<<endl;
    cout << "adresse forme 3 "<<TestDeVecteur->getForme(2)<<endl;
    cout << "adresse forme 3 "<<TestDeVecteur->getForme(3)<<endl;
+   
    cout<< "Ajout de forme dans le vecteur"<<endl;
    TestDeVecteur->addFormeEnd(pointCercle);
    TestDeVecteur->addFormeEnd(pointCarre);
    TestDeVecteur->addFormeEnd(point2Carre);
    TestDeVecteur->addFormeEnd(pointRectangle);
+
       cout<< "Verivication new adresse dans vecteur."<<endl;
+   cout << "adresse forme 1 "<<TestDeVecteur->getForme(0)<<endl;
+   cout << "adresse forme 2 "<<TestDeVecteur->getForme(1)<<endl;
+   cout << "adresse forme 3 "<<TestDeVecteur->getForme(2)<<endl;
+   cout << "adresse forme 4 "<<TestDeVecteur->getForme(3)<<endl;
+
+      TestDeVecteur->suppForme(1);
+      cout<< "suppression forme 2"<<endl;
    cout << "adresse forme 1 "<<TestDeVecteur->getForme(0)<<endl;
    cout << "adresse forme 2 "<<TestDeVecteur->getForme(1)<<endl;
    cout << "adresse forme 3 "<<TestDeVecteur->getForme(2)<<endl;

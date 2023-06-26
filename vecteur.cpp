@@ -71,11 +71,19 @@ bool  Vecteur::addFormeEnd(Forme *pasRapport )
 }
 
 Forme* Vecteur::suppForme(int indice)
-{
+{    if (indice <= tailleActuelle)
+    {    
     Forme** tableauOut = new Forme*[1];
     tableauOut[1] = tableau[indice];
-    delete&tableau[indice];
+    tableau[indice]=NULL;
+
     return tableauOut[1];
+    }
+    else
+    {
+        return NULL;
+    }
+
 }
 
 
