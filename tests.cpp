@@ -97,7 +97,7 @@ void Tests::tests_unitaires_vecteur()
 
 //============================
       cout<< "  ~~Test d'affichage de forme"<<endl; 
-   TestDeVecteur->afficher();
+   TestDeVecteur->afficher(cout);
 }
 
 void Tests::tests_unitaires_couche()
@@ -137,12 +137,26 @@ void Tests::tests_unitaires_couche()
    cout << "adresse forme 4 "<<TestDeCouche->obtenirForme(3)<<endl;
 
       TestDeCouche->retirerForme(1);
-      cout<< "suppression forme 2"<<endl;
+   cout<< "suppression forme 2"<<endl;
    cout << "adresse forme 1 "<<TestDeCouche->obtenirForme(0)<<endl;
    cout << "adresse forme 2 "<<TestDeCouche->obtenirForme(1)<<endl;
    cout << "adresse forme 3 "<<TestDeCouche->obtenirForme(2)<<endl;
    cout << "adresse forme 4 "<<TestDeCouche->obtenirForme(3)<<endl;
 
+   cout<< "Aire totale de la Couche"<<endl;
+   cout << "Aire Totale= "<<TestDeCouche->aireTotale()<<endl;
+
+   cout<< "Translater la couche"<<endl;
+   cout << "Translation: "<<TestDeCouche->translaterCouche(10,5)<<endl;
+
+
+
+   cout<< "Set L'etat de la couche"<<endl;
+   cout << "Seter l'etat= "<<TestDeCouche->setEtatCouche(1)<<endl;
+
+
+   cout<< "Faire l'affichage de la couche"<<endl;
+   TestDeCouche->afficherCouche(cout);
 
 }
 

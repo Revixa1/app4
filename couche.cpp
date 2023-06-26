@@ -12,11 +12,13 @@
 
 
 
-Couche::Couche()
+Couche::Couche(int numCoucheIn)
 {
-    bool initialise=1;
-    bool active=0;
-    bool inactive=0;
+    initialise=1;
+    active=0;
+    inactive=0;
+    numCouche=numCoucheIn;
+    
     
 
 }
@@ -118,3 +120,7 @@ bool Couche::setEtatCouche(int EtatIn)
     return true;
 }
 
+void Couche::afficherCouche(ostream & s)
+{
+    vec.afficher(s);
+}

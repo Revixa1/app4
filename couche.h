@@ -19,9 +19,9 @@ class Couche
 {
    // Classe a completer
    public:
-      Couche();
+      Couche(int numCoucheIn=0);
       ~Couche();
-
+      int numCouche;
 
       bool ajouterForme(Forme*);
       int retirerForme(int indexeIn);
@@ -30,7 +30,7 @@ class Couche
       bool translaterCouche(int Dx, int Dy);
       bool initCouche();
       bool setEtatCouche(int EtatIn);
-
+      void afficherCouche(ostream & s);
 
    private:
       bool initialise;

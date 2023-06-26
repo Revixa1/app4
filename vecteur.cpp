@@ -98,7 +98,7 @@ Forme* Vecteur::getForme(int position)
 }
 
 
-void Vecteur::afficher()
+void Vecteur::afficher(ostream & s)
 {
     Forme *ptrForme;
     
@@ -107,15 +107,15 @@ void Vecteur::afficher()
     {
         if (tableau[i]==NULL)
         {
-            cout<< "Forme supprimee"<<endl;
+            s<< "Forme supprimee"<<endl;
         }
         else
         {
             ptrForme=getForme(i);
-            ptrForme->afficher(cout);
+            ptrForme->afficher(s);
         }
     }
-
+    delete ptrForme;
 }
 
 
