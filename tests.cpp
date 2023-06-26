@@ -159,6 +159,34 @@ void Tests::tests_unitaires_couche()
    cout<< "Faire l'affichage de la couche"<<endl;
    TestDeCouche->afficherCouche(cout);
 
+
+   cout<< "Ajout de forme dans le Couche"<<endl;
+   TestDeCouche->ajouterForme(pointCercle);
+   TestDeCouche->ajouterForme(pointCarre);
+   TestDeCouche->ajouterForme(point2Carre);
+   TestDeCouche->ajouterForme(pointRectangle);
+
+      cout<< "Verivication new adresse dans Couche."<<endl;
+   cout << "adresse forme 1 "<<TestDeCouche->obtenirForme(0)<<endl;
+   cout << "adresse forme 2 "<<TestDeCouche->obtenirForme(1)<<endl;
+   cout << "adresse forme 3 "<<TestDeCouche->obtenirForme(2)<<endl;
+   cout << "adresse forme 4 "<<TestDeCouche->obtenirForme(3)<<endl;
+
+      TestDeCouche->retirerForme(1);
+   cout<< "suppression forme 2"<<endl;
+   cout << "adresse forme 1 "<<TestDeCouche->obtenirForme(0)<<endl;
+   cout << "adresse forme 2 "<<TestDeCouche->obtenirForme(1)<<endl;
+   cout << "adresse forme 3 "<<TestDeCouche->obtenirForme(2)<<endl;
+   cout << "adresse forme 4 "<<TestDeCouche->obtenirForme(3)<<endl;
+
+   cout<< "Aire totale de la Couche"<<endl;
+   cout << "Aire Totale= "<<TestDeCouche->aireTotale()<<endl;
+
+   cout<< "Translater la couche"<<endl;
+   cout << "Translation: "<<TestDeCouche->translaterCouche(10,5)<<endl;
+   
+   cout<< "Faire l'affichage de la couche"<<endl;
+   TestDeCouche->afficherCouche(cout);
 }
 
 void Tests::tests_unitaires_canevas()
