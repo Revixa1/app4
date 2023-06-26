@@ -10,7 +10,20 @@
 
 Canevas::Canevas()
 {    
-   monCanevas = new Vecteur[MAX_COUCHES];
+   //*couches = new Couche[MAX_COUCHES];
+   for ( int i =0; i<MAX_COUCHES; i++)
+   {
+      if ( i==0)
+      {
+         couches[i].initCouche();
+         couches[i].setEtatCouche(1);
+      }
+      else
+      {
+         couches[i].initCouche();
+      }
+   }
+
 }
 
 Canevas::~Canevas()
@@ -19,13 +32,14 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
-   delete[] monCanevas;
+   delete[] couches;
    Canevas();
    return true;
 }
 
 bool Canevas::activerCouche(int index)
 {
+
    return true;
 }
 
