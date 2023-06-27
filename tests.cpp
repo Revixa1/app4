@@ -315,7 +315,7 @@ void Tests::tests_application_cas_01()
    validCanevas_1->afficher(cout);
    cout<<endl;  
 //13
-   cout << "_____14. Afficher l'aire du canevas."<< endl;
+   cout << "_____16. Afficher l'aire du canevas."<< endl;
    cout<<validCanevas_1->aire()<<endl<<endl;
 }
 
