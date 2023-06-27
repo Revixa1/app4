@@ -10,6 +10,7 @@
 
 Canevas::Canevas()
 {    
+   couches = new Couche[MAX_COUCHES];
    for ( int i =0; i<MAX_COUCHES; i++)
    {
       if ( i==0)
@@ -32,7 +33,10 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
-   delete & couches;
+   
+   delete [] couches;
+   
+   cout<<"allo=========="<<endl;
    Canevas();
    return true;
 }
@@ -117,6 +121,11 @@ void Canevas::afficher(ostream & s)
    for (int i=0 ; i<MAX_COUCHES ; i++ )
    {
       cout<<"----- Couche "<<i<<endl;
-      couches[i].afficherCouche(s);
+      
+      
+      
+         couches[i].afficherCouche(s);
+     
+     
    }
 }

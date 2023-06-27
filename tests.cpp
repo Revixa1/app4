@@ -211,9 +211,24 @@ void Tests::tests_unitaires_canevas()
    Cercle *TestDeCercle=new Cercle; 
    Canevas *testDeCanevas= new Canevas;
    //testDeCanevas->activerCouche(1);
-   testDeCanevas->ajouterForme(TestDeCarre);
-   testDeCanevas->ajouterForme(TestDeCercle);
+
+   cout<<"ajouter forme : "<<testDeCanevas->ajouterForme(TestDeCarre)<<endl;
+   cout<<"activer couche 2: "<<testDeCanevas->activerCouche(2)<<endl;
+   cout<<"ajouter forme: "<<testDeCanevas->ajouterForme(TestDeCercle)<<endl;
+   cout<<"aire du canevas: "<<testDeCanevas->aire()<<endl;
+   cout<<"translater la couche active: "<<testDeCanevas->translater(11,33)<<endl;
    testDeCanevas->afficher(cout);
+
+   
+   cout<<"retirer forme 0 couche 2 canevas: "<<testDeCanevas->retirerForme(0)<<endl;
+   testDeCanevas->afficher(cout);
+  // cout<<"activer couche 2: "<<testDeCanevas->activerCouche(2)<<endl;
+
+   
+   cout<<"reinit canevas: "<<testDeCanevas->reinitialiser()<<endl;
+   testDeCanevas->afficher(cout);
+
+
 }
 
 void Tests::tests_unitaires()

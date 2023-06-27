@@ -22,7 +22,7 @@ class Couche
       Couche();
       ~Couche();
       
-
+      int getTailleActuelle() const;
       bool ajouterForme(Forme*);
       Forme* retirerForme(int indexeIn);
       Forme* obtenirForme(int indexeIn) const;

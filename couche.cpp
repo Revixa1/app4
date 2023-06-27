@@ -48,7 +48,8 @@ Forme* Couche::retirerForme(int indexeIn)
     if(active!=true){
         return NULL;
     }
-
+    if(NULL==vec.getForme(indexeIn)){return NULL;}
+    
     ptrForme=vec.suppForme(indexeIn);
     if(NULL!=vec.getForme(indexeIn)){return NULL;}
 
@@ -172,3 +173,7 @@ void Couche::afficherCouche(ostream & s)
 }
 
 
+int Couche::getTailleActuelle() const
+{
+    return vec.getTailleActuelle();
+}
