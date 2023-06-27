@@ -18,32 +18,74 @@ tests_unitaires_rectangle();
 
 void Tests::tests_unitaires_rectangle()
 {cout<< " ~~RECTANGLE"<< endl;
-   int hauteur=2;
-   int largeur=3;
+   int hauteur=5;
+   int largeur=10;
    Rectangle *TestDeRectangle = new Rectangle; 
-   TestDeRectangle->setHauteur(hauteur);
-   TestDeRectangle->setLargeur(largeur);
-   int Hauteur = TestDeRectangle->getHauteur();
-   int Largeur = TestDeRectangle->getLargeur();
-   cout << "hauteur : "<<Hauteur<< endl;
-   cout << "Laugeur : "<<Largeur<< endl;
+
+   cout<<"Rectangle sans valeurs initialles avec afficher:"<<endl;
+   TestDeRectangle->afficher(cout);
+   cout<<"Rectangle sans valeurs initialles avec Get:"<<endl;
+   cout << "   hauteur : "<<TestDeRectangle->getHauteur()<< endl;
+   cout << "   Laugeur : "<<TestDeRectangle->getLargeur()<< endl;
+   cout << "   Aire : "<<TestDeRectangle->aire()<<endl;
+
+   cout<<"Rectangle avec valeurs initialles(h=5, l=10) grace a methode set... et  afficher:"<<endl;
+   TestDeRectangle->setHauteur(5);
+   TestDeRectangle->setLargeur(10);
+   TestDeRectangle->afficher(cout);
+   cout<<"Rectangle avec valeurs initialles(h=5, l=10) grace a methode get :"<<endl;
+   cout << "   hauteur : "<<TestDeRectangle->getHauteur()<< endl;
+   cout << "   Laugeur : "<<TestDeRectangle->getLargeur()<< endl;
+   cout << "   Aire : "<<TestDeRectangle->aire()<<endl;
+   cout<<endl;
 }
 
 void Tests::tests_unitaires_carre()
 {cout << "  ~~CARRE" <<endl;
-   int tailleTest=2;
+
+   int cote=10;
+   Carre *TestDeCarre = new Carre; 
+   cout<<"Carre sans valeurs initialles avec afficher:"<<endl;
+   TestDeCarre->afficher(cout);
+   cout<<"Carre sans valeurs initialles avec Get:"<<endl;
+   cout << "   Cote : "<<TestDeCarre->getTaille()<< endl;
+   cout << "   Aire : "<<TestDeCarre->aire()<<endl;
+
+   cout<<"Carre avec valeurs initialles(cote = 10) grace a methode setTaille et  afficher:"<<endl;
+   TestDeCarre->setTaille(cote);
+   TestDeCarre->afficher(cout);
+   cout<<endl;
+ //  cout<<"Carre avec valeurs initialles(h=5, l=10) grace a methode get :"<<endl;
+ //  cout << "   Cote : "<<TestDeCarre->getTaille()<< endl;
+  // cout << "   Aire : "<<TestDeCarre->aire()<<endl;
+  
+  /* int tailleTest=2;
   
    Carre *TestDeCarre = new Carre; 
    TestDeCarre->setTaille(tailleTest);
    int Taille=TestDeCarre->getTaille();
    cout << "taille :"<<Taille<<endl;
+ */
 }
 
 
 void Tests::tests_unitaires_cercle()
 {cout << "  ~~CERCLE" <<endl;
-   int rayonTest=2;
-  
+   int rayon=3;
+   Cercle *TestDeCercle = new Cercle; 
+
+   cout<<"Cercle sans valeurs initialles avec la methode afficher:"<<endl;
+   TestDeCercle->afficher(cout);
+   cout<<"Cercle sans valeurs initialles avec la methode GetRayon:"<<endl;
+   cout << "   Cote : "<<TestDeCercle->getRayon()<< endl;
+   cout << "   Aire : "<<TestDeCercle->aire()<<endl;
+
+   cout<<"Cercle avec valeurs initialles(rayon = 3) grace aux methodes setRayon et  afficher:"<<endl;
+   TestDeCercle->setRayon(rayon);
+   TestDeCercle->afficher(cout);
+   cout<<endl;
+
+  /*
    Cercle *TestDeCercle=new Cercle; 
    TestDeCercle->setRayon(rayonTest);
    int Rayon=TestDeCercle->getRayon();
@@ -51,6 +93,7 @@ void Tests::tests_unitaires_cercle()
    Forme *FormeCercle= new Cercle(2);
    FormeCercle->translater(3,6);
    FormeCercle->afficher(cout);
+ */
 }
 
 
@@ -329,6 +372,16 @@ void Tests::tests_application_cas_01(ostream & s)
 
 void Tests::tests_application_cas_02(ostream & s)
 {
+   tests_unitaires_formes();
+
+
+
+
+
+   //tests_unitaires_carre();
+   //tests_unitaires_cercle();
+   //tests_unitaires_rectangle();
+
    //cout << "TESTS APPLICATION (CAS 02)" << endl;  
     // Il faut ajouter les operations realisant ce scenario de test.
 }
