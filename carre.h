@@ -9,8 +9,8 @@ using namespace std;
 
 class Carre:public Rectangle
 {
-private:
-	int taille;
+//private:
+//	int taille;
 public:
 	
 	Carre(int xcoords=0, int ycoords=0,int TailleIn=1);
