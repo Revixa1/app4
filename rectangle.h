@@ -11,7 +11,7 @@ class Rectangle:public Forme
 
 public:
 	
-	Rectangle(int hauteurIn=1 , int largeurIn=1 , int xcoords=0, int ycoords=0);
+	Rectangle( int xcoords=0, int ycoords=0,int largeurIn=1,int hauteurIn=1 );
 	~Rectangle();
 	void setHauteur(int hauteurIn);
 	void setLargeur(int largeurIn);
@@ -22,7 +22,7 @@ public:
 	virtual double aire();
 	virtual void afficher(ostream & s);
 
-private:
+protected:
 	int hauteur;
 	int largeur;
 	

@@ -3,7 +3,7 @@
 using namespace std;
 
 
-Rectangle::Rectangle(int hauteurIn , int largeurIn , int xcoords, int ycoords):Forme(xcoords,ycoords)
+Rectangle::Rectangle(int xcoords, int ycoords,int largeurIn,int hauteurIn ):Forme(xcoords,ycoords)
 {
     hauteur=hauteurIn;
     largeur=largeurIn;
@@ -21,25 +21,25 @@ Rectangle::~Rectangle()
 void Rectangle::setHauteur(int Hauteur) 
 {   
     hauteur=Hauteur;
-    cout<< "setHauteur"<< endl;
+   // cout<< "setHauteur"<< endl;
 }
 
 void Rectangle::setLargeur(int Largeur) 
 {
     largeur = Largeur;
-    cout<< "setLargeur"<< endl;
+  //  cout<< "setLargeur"<< endl;
 }
 	
 int Rectangle::getHauteur()
 {
-    cout<< "getHauteur"<< endl; 
+   // cout<< "getHauteur"<< endl; 
     return hauteur;
 
 }
 
 int Rectangle::getLargeur()
 {
-    cout<< "getLargeur"<< endl;
+    //cout<< "getLargeur"<< endl;
     return largeur;
 }
 

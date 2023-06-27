@@ -4,10 +4,10 @@ using namespace std;
 
 
 
-Carre::Carre(int tailleIn, int xcoords, int ycoords):Rectangle(tailleIn,tailleIn,xcoords,ycoords)
+Carre::Carre(int xcoords, int ycoords,int tailleIn ):Rectangle(xcoords,ycoords,tailleIn,tailleIn)
 {
     
-    taille=tailleIn;
+    //taille=tailleIn;
 
     // ancrage.x=xcoords;
     // ancrage.y=ycoords;
@@ -21,27 +21,29 @@ Carre::~Carre()
 
 
 
-void Carre::setTaille(int Taille) 
+void Carre::setTaille(int TailleIn) 
 {   
-    taille=Taille;
-    cout<< "setHauteur"<< endl;
+    hauteur=TailleIn;
+    largeur=TailleIn;
+    //cout<< "setHauteur"<< endl;
 }
 
 	
 int Carre::getTaille()
 {
-    cout<< "getTaille"<< endl; 
-    return taille;
+    //cout<< "getTaille"<< endl; 
+    return hauteur;
 }
 
 
-
+/*
 double Carre::aire()
 {
     double A=taille*taille;
     return A;
 
 }
+*/
 
 void Carre::afficher(ostream & s)
 {

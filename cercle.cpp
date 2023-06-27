@@ -4,12 +4,12 @@ using namespace std;
 
 
 
-Cercle::Cercle(double rayonIn, int xcoords, int ycoords)
+Cercle::Cercle(int xcoords, int ycoords,double rayonIn ):Forme(xcoords,ycoords)
 {
 
     rayon= rayonIn;
-    ancrage.x=xcoords;
-    ancrage.y=ycoords;
+    //ancrage.x=xcoords;
+    //ancrage.y=ycoords;
 
 
 }
@@ -18,13 +18,13 @@ Cercle::Cercle(double rayonIn, int xcoords, int ycoords)
 void Cercle::setRayon(double rayonIn) 
 {   
     rayon=rayonIn;
-    cout<< "setRayon"<< endl;
+   // cout<< "setRayon"<< endl;
 }
 
 	
 int Cercle::getRayon()
 {
-    cout<< "getRayon"<< endl; 
+   // cout<< "getRayon"<< endl; 
     return rayon;
 }
 

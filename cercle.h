@@ -11,7 +11,7 @@ class Cercle:public Forme
 {
 
 public:
-	Cercle(double rayonIn=1, int xcoords=0, int ycoords=0);
+	Cercle(int xcoords=0, int ycoords=0,double rayonIn=1);
     
 
 	void setRayon(double rayonIn);
