@@ -40,10 +40,18 @@ int Vecteur::getTailleActuelle() const
 
 void Vecteur::cleanVecteur()
 {
-    for(int i=0;i<tailleCapacite;i++)
+    for(int i=0;i<tailleActuelle;i++)
     {
-        if(tableau[i]!=NULL){delete tableau[i];}
+                 
+
+        if(tableau[i]!=NULL)
+        {
+            //cout<<"lol"<<endl;
+            delete & tableau[i];
+
+        }//cout<<i<<endl;
     }
+    
     for (int i = 0; i<tailleCapacite;i++)
     {
         tableau[i]=NULL;

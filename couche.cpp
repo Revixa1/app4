@@ -111,8 +111,12 @@ bool Couche::translaterForme(int indexeIn,int Dx, int Dy)
 
 bool Couche::initCouche()
 {
+    //cout<<"ici"<<endl;
+
     vec.cleanVecteur();
     //vect.Vecteur
+    //   cout<<"ici"<<endl;
+
     for(int i=0;i<vec.getTailleActuelle();i++ )
     {
 
