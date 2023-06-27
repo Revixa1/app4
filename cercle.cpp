@@ -8,8 +8,6 @@ Cercle::Cercle(int xcoords, int ycoords,double rayonIn ):Forme(xcoords,ycoords)
 {
 
     rayon= rayonIn;
-    //ancrage.x=xcoords;
-    //ancrage.y=ycoords;
 
 
 }
@@ -17,7 +15,10 @@ Cercle::Cercle(int xcoords, int ycoords,double rayonIn ):Forme(xcoords,ycoords)
 
 void Cercle::setRayon(double rayonIn) 
 {   
-    rayon=rayonIn;
+    if (rayon<0)
+    {cout<<"error"<<endl;}
+    else
+    {rayon=rayonIn;}
    // cout<< "setRayon"<< endl;
 }
 

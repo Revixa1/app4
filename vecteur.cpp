@@ -90,24 +90,20 @@ Forme* Vecteur::suppForme(int indice)
 {    
     if (indice >= tailleActuelle || indice < 0)
     {  return NULL;  }
-
-    Forme* ptrForme;
-    ptrForme = tableau[indice];
-
-    /*
-    if(tableau[indice]!=NULL){
-        delete tableau[indice];
-    } else{
-        return NULL;
-    }*/
-
-
-    tableau[indice]=NULL;
-
-    return ptrForme;
-
+    else
+    {
+        Forme* ptrForme;
+        ptrForme = tableau[indice];
+        tableau[indice]=NULL;
+      if (indice < tailleActuelle)
+      {
+        for(int i=indice ; i<=tailleActuelle ; i++)
+        {tableau[i]=tableau[i+1];}
+      }
+        tailleActuelle--;
+        return ptrForme;
     }
-
+}
 
 Forme* Vecteur::getForme(int position) const
 {

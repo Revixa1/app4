@@ -59,7 +59,7 @@ bool Canevas::reinitialiser()
 
 bool Canevas::initCoucheCanevas(int index)
 {
-   if (index<=MAX_COUCHES)
+   if (index<=MAX_COUCHES && index>=0)
    {
       couches[index].initCouche();
       return true;
@@ -72,6 +72,10 @@ bool Canevas::initCoucheCanevas(int index)
 
 bool Canevas::activerCouche(int index)
 {
+ if (index <0 || index >= 5)
+ { return false;}
+ else
+ {
    for (int i=0 ; i<MAX_COUCHES ; i++ )
    {
       if (couches[i].getEtatCouche()==1)
@@ -81,6 +85,7 @@ bool Canevas::activerCouche(int index)
    }
    couches[index].setEtatCouche(1);
    return true;
+ }
 }
 
 bool Canevas::ajouterForme(Forme *p_forme)
@@ -100,12 +105,12 @@ bool Canevas::ajouterForme(Forme *p_forme)
 bool Canevas::retirerForme(int index)
 {
    Forme* ptrForme;
-
    for (int i=0 ; i<MAX_COUCHES ; i++ )
    {
       if (couches[i].getEtatCouche()==1)
       {
          ptrForme=couches[i].retirerForme(index);
+        
          if (ptrForme==NULL)
          {
             return false;

@@ -17,10 +17,6 @@ Couche::Couche()
     initialise=1;
     active=0;
     inactive=0;
-  
-    
-    
-
 }
 
 
@@ -45,7 +41,7 @@ bool Couche::ajouterForme(Forme *uneFormeIn)
 Forme* Couche::retirerForme(int indexeIn)
 {
     Forme* ptrForme;
-    if(active!=true){
+    if(active!=true || indexeIn>getTailleActuelle()|| indexeIn<0){
         return NULL;
     }
     if(NULL==vec.getForme(indexeIn)){return NULL;}
@@ -111,11 +107,9 @@ bool Couche::translaterForme(int indexeIn,int Dx, int Dy)
 
 bool Couche::initCouche()
 {
-    //cout<<"ici"<<endl;
 
     vec.cleanVecteur();
-    //vect.Vecteur
-    //   cout<<"ici"<<endl;
+
 
     for(int i=0;i<vec.getTailleActuelle();i++ )
     {
@@ -123,11 +117,11 @@ bool Couche::initCouche()
         if(NULL!=vec.getForme(i)){return false;}
        
     }
-    //Couche();
+
     initialise=1;
     active=0;
     inactive=0;
-    //cout<<"ici cest ok"<<endl;
+
     return true;
 }
 
@@ -172,7 +166,7 @@ int Couche::getEtatCouche() const
 
 void Couche::afficherCouche(ostream & s)
 {
-    if(initialise==true){
+    if(initialise==true || getTailleActuelle()==0){
         s<<"Couche initialisee"<<endl;
     }
     else{
