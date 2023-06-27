@@ -324,7 +324,7 @@ void Tests::tests_application_cas_01(ostream & s)
    s<<endl;
 //4
    s << "_____4. Afficher l'aire du canevas."<< endl;
-   s<<validCanevas_1->aire()<<endl<<endl;
+   s<<"aire = "<<validCanevas_1->aire()<<endl<<endl;
 //5
    s <<"_____5. Activer la couche 0."<<"   Retour : " <<validCanevas_1->activerCouche(0)<< endl;
    s <<"Ajout d'un rectangle :   x=0, y=0, largeur=1, hauteur=1    Retour : " <<validCanevas_1->ajouterForme(validRectangle_3)<<endl;
@@ -337,6 +337,7 @@ void Tests::tests_application_cas_01(ostream & s)
    s<<"  ~Un cercle(x=4, y=3, rayon=5)"<<endl;
    s<<"  ~Un carre(x=8, y=4, cote=6)"<<endl;
    s<<"  ~Un rectangle(x=6, y=11, largeur=3, hauteur=9)"<<endl<<endl;
+//7
    s <<"_____7. Couche 3 initialisee."<<"   Retour : " <<validCanevas_1->initCoucheCanevas(3)<<endl<< endl;
       //s<<"Verefication du contenu de la couche apres init."<<endl;
       //validCanevas_1->couches[3].afficherCouche(s);
@@ -348,7 +349,7 @@ void Tests::tests_application_cas_01(ostream & s)
    s<<endl;
 //10
    s << "_____10. Afficher l'aire du canevas."<< endl;
-   s<<validCanevas_1->aire()<<endl<<endl;
+   s<<"aire = "<<validCanevas_1->aire()<<endl<<endl;
 //11
    s <<"_____11. Activer la couche 0."<<"   Retour : " <<validCanevas_1->activerCouche(0)<<endl;
    s<<"a)Retirer la forme 2 de la couche."<<"   Retour : "<<validCanevas_1->retirerForme(1)<<endl<<endl;
@@ -358,7 +359,7 @@ void Tests::tests_application_cas_01(ostream & s)
    s<<endl;
 //13
    s << "_____13. Afficher l'aire du canevas."<< endl;
-   s<<validCanevas_1->aire()<<endl<<endl;
+   s<<"aire = "<<validCanevas_1->aire()<<endl<<endl;
 //14
    s << "_____14. Reinitialiser le canevas."<<"   Retour : " <<validCanevas_1->reinitialiser()<< endl<<endl;
 //15
@@ -367,19 +368,46 @@ void Tests::tests_application_cas_01(ostream & s)
    s<<endl;  
 //16
    s << "_____16. Afficher l'aire du canevas."<< endl;
-   s<<validCanevas_1->aire()<<endl<<endl;
+   s<<"aire = "<<validCanevas_1->aire()<<endl<<endl;
 // Fin des test
    s<< "_____FIN DES TESTS_____"<<endl<<endl;
 }
 
 void Tests::tests_application_cas_02(ostream & s)
 {
-   tests_unitaires_formes();
+   Canevas     *Canevas_1 = new Canevas;
+   Cercle      *Cercle_1 = new Cercle(0,0,-2);
+   Cercle      *Cercle_2 = new Cercle; 
 
+   Carre       *Carre_1 = new Carre(4,1,6);
+   Carre       *Carre_2 = new Carre;
 
+   Rectangle   *Rectangle_1 = new Rectangle(2,8,3,9);
+   Rectangle   *Rectangle_2 = new Rectangle(0,0,4,2);
+   Rectangle   *Rectangle_3 = new Rectangle;
 
-
-
+   s<<"Test 1 : activation de la couche -1       Retour:"<< Canevas_1->activerCouche(-1)<<endl;
+   s<<"Test 2 : activation de la couche 3        Retour:"<< Canevas_1->activerCouche(3)<<endl;
+   s<<"Test 3 : activation de la couche 7        Retour:"<< Canevas_1->activerCouche(7)<<endl;
+   s<<"Test 4 : ajout d'un cercle (Rayon= -2)    Retour:"<< Canevas_1->ajouterForme(Cercle_1)<<endl;
+   s<<"Test 5 : affichage du canevas             "<<endl;
+      Canevas_1->afficher(cout);
+   s<<"Test 6 : initialisanton couche -2         Retour: " <<Canevas_1->initCoucheCanevas(-2)<< endl;
+   s<<"Test 7 : activation de la couche 3        Retour:"<< Canevas_1->activerCouche(3)<<endl;
+   s<<"Test 8 : suppression de la forme -2       Retour: " <<Canevas_1->retirerForme(-2)<<endl;
+   s<<"Test 9 : suppression de la forme 2        Retour: " <<Canevas_1->retirerForme(2)<<endl;
+   s<<"Test 10 : suppression de la forme 1       Retour: " <<Canevas_1->retirerForme(0)<<endl;
+   s<<"         affichage du canevas             "<<endl;
+      Canevas_1->afficher(cout); 
+   s<<"Test 11: verification aire canevas vide   Aire: " <<Canevas_1->aire()<<endl;
+   s<<"  (Ajout de forme pour test de translation et affichage de celle-ci) " <<endl;
+      Canevas_1->ajouterForme(Cercle_2);
+      Canevas_1->ajouterForme(Carre_2);
+      Canevas_1->ajouterForme(Rectangle_3);
+      Canevas_1->afficher(cout); 
+   s<<"Test 12: Translation de couche(x=1,y=2)   Retour: " <<Canevas_1->translater(10,2)<<endl;
+      Canevas_1->afficher(cout); 
+   s<<"Test 13:    Aire: " <<Canevas_1->aire()<<endl;
    //tests_unitaires_carre();
    //tests_unitaires_cercle();
    //tests_unitaires_rectangle();
