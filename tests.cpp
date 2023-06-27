@@ -368,6 +368,8 @@ void Tests::tests_application_cas_01(ostream & s)
 //16
    s << "_____16. Afficher l'aire du canevas."<< endl;
    s<<validCanevas_1->aire()<<endl<<endl;
+// Fin des test
+   s<< "_____FIN DES TESTS_____"<<endl<<endl;
 }
 
 void Tests::tests_application_cas_02(ostream & s)
