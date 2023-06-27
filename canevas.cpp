@@ -16,6 +16,7 @@ Canevas::Canevas()
       if ( i==0)
       {
          couches[i].initCouche();
+         
          couches[i].setEtatCouche(1);
       }
       else
@@ -36,9 +37,21 @@ bool Canevas::reinitialiser()
    
    delete [] couches;
    
-   cout<<"allo=========="<<endl;
    Canevas();
    return true;
+}
+
+bool Canevas::initCoucheCanevas(int index)
+{
+   if (index<=MAX_COUCHES)
+   {
+      couches[index].initCouche();
+      return true;
+   }
+   else
+   {return false;}
+   
+   
 }
 
 bool Canevas::activerCouche(int index)
