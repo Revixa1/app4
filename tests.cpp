@@ -407,7 +407,7 @@ void Tests::tests_application_cas_02(ostream & s)
       Canevas_1->afficher(cout); 
    s<<"Test 12: Translation de couche(x=1,y=2)   Retour: " <<Canevas_1->translater(10,2)<<endl;
       Canevas_1->afficher(cout); 
-   s<<"Test 13:    Aire: " <<Canevas_1->aire()<<endl;
+   s<<"Test 13: desactivation de la couche active Retour: " <<"impossible"<<endl;
    //tests_unitaires_carre();
    //tests_unitaires_cercle();
    //tests_unitaires_rectangle();
