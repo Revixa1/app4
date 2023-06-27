@@ -4,13 +4,13 @@ using namespace std;
 
 
 
-Carre::Carre(int tailleIn, int xcoords, int ycoords)
+Carre::Carre(int tailleIn, int xcoords, int ycoords):Rectangle(tailleIn,tailleIn,xcoords,ycoords)
 {
     
     taille=tailleIn;
 
-    ancrage.x=xcoords;
-    ancrage.y=ycoords;
+    // ancrage.x=xcoords;
+    // ancrage.y=ycoords;
 }
 
 Carre::~Carre()

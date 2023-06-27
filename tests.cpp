@@ -205,8 +205,7 @@ void Tests::tests_unitaires_couche()
 }
 
 void Tests::tests_unitaires_canevas()
-{
-   cout<<"tests canevas ici ____________________"<<endl;
+{cout<<"tests canevas ici ____________________"<<endl;
    Carre *TestDeCarre = new Carre; 
    Cercle *TestDeCercle=new Cercle; 
    Canevas *testDeCanevas= new Canevas;
@@ -250,12 +249,30 @@ void Tests::tests_application()
 
 void Tests::tests_application_cas_01()
 {
-   cout << "TESTS APPLICATION (CAS 01)" << endl; 
+   Canevas     *validCanevas_1 = new Canevas;
+   Cercle      *validCercle_1 = new Cercle(5,0,0); 
+   Carre       *validCarre_1 = new Carre(6,4,1); 
+   Rectangle   *validRectangle_1 = new Rectangle(9,3,2,8);
+   Rectangle   *validRectangle_2 = new Rectangle(2,4,0,0);
+
+   cout << "1. Activer la couche 2."<<"   Retour : " <<validCanevas_1->activerCouche(2)<< endl;
+   cout <<" ajout d'un cercle : rayon=5, x=0, y=0 "<<"   Retour : " <<validCanevas_1->ajouterForme(validCercle_1)<<endl;
+         validCanevas_1->ajouterForme(validCarre_1);
+         validCanevas_1->ajouterForme(validRectangle_1);
+
+   cout << "2. Activer la couche 1."<<"   Retour : " <<validCanevas_1->activerCouche(1)<<endl;
+         validCanevas_1->ajouterForme(validRectangle_2);
+   cout << "3. Afficher le canevas."<< endl;
+      validCanevas_1->afficher(cout);
+   cout << "1. Afficher l'aire du canevas."<< endl;
+      cout<<validCanevas_1->aire()<<endl;
+
+   //cout << "TESTS APPLICATION (CAS 01)" << endl; 
    // Il faut ajouter les operations realisant ce scenario de test.
 }
 
 void Tests::tests_application_cas_02()
 {
-   cout << "TESTS APPLICATION (CAS 02)" << endl;  
+   //cout << "TESTS APPLICATION (CAS 02)" << endl;  
     // Il faut ajouter les operations realisant ce scenario de test.
 }
