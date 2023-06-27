@@ -241,13 +241,21 @@ void Tests::tests_unitaires()
 
 void Tests::tests_application()
 {
+   ofstream logFileCas1;
+   ofstream logFileCas2;
+
    // Fait tous les tests applicatifs
-   tests_application_cas_01();
-   tests_application_cas_02();
+   logFileCas1.open ("Cas1.log");
+   tests_application_cas_01(logFileCas1);
+   logFileCas1.close ();
+
+   logFileCas2.open ("Cas2.log");
+   tests_application_cas_02(logFileCas2);
+   logFileCas2.close();
    
 }
 
-void Tests::tests_application_cas_01()
+void Tests::tests_application_cas_01(ostream & s)
 {
    Canevas     *validCanevas_1 = new Canevas;
    Cercle      *validCercle_1 = new Cercle(0,0,5);
@@ -260,66 +268,66 @@ void Tests::tests_application_cas_01()
    Rectangle   *validRectangle_2 = new Rectangle(0,0,4,2);
    Rectangle   *validRectangle_3 = new Rectangle;
 //1
-   cout <<"_____1. Activer la couche 2."<<"   Retour : " <<validCanevas_1->activerCouche(2)<< endl;
-   cout <<"Ajout d'un cercle :      x=0, y=0, rayon=5                Retour : " <<validCanevas_1->ajouterForme(validCercle_1)<<endl;
-   cout <<"Ajout d'un carre :       x=4, y=1, cote=6                 Retour : "   <<validCanevas_1->ajouterForme(validCarre_1)<<endl;
-   cout <<"Ajout d'un rectangle :   x=2, y=8, largeur=3, hauteur=9,  Retour : "<<validCanevas_1->ajouterForme(validRectangle_1)<<endl<<endl;
+   s <<"_____1. Activer la couche 2."<<"   Retour : " <<validCanevas_1->activerCouche(2)<< endl;
+   s <<"Ajout d'un cercle :      x=0, y=0, rayon=5                Retour : " <<validCanevas_1->ajouterForme(validCercle_1)<<endl;
+   s <<"Ajout d'un carre :       x=4, y=1, cote=6                 Retour : "   <<validCanevas_1->ajouterForme(validCarre_1)<<endl;
+   s <<"Ajout d'un rectangle :   x=2, y=8, largeur=3, hauteur=9,  Retour : "<<validCanevas_1->ajouterForme(validRectangle_1)<<endl<<endl;
 //2
-   cout << "_____2. Activer la couche 1."<<"   Retour : " <<validCanevas_1->activerCouche(1)<<endl;
-   cout <<"Ajout d'un rectangle :   x=0, y=0, largeur=4, hauteur=2   Retour : "<<validCanevas_1->ajouterForme(validRectangle_2)<<endl<<endl;
+   s << "_____2. Activer la couche 1."<<"   Retour : " <<validCanevas_1->activerCouche(1)<<endl;
+   s <<"Ajout d'un rectangle :   x=0, y=0, largeur=4, hauteur=2   Retour : "<<validCanevas_1->ajouterForme(validRectangle_2)<<endl<<endl;
 //3
-   cout << "_____3. Afficher le canevas."<< endl;
-      validCanevas_1->afficher(cout);
-   cout<<endl;
+   s << "_____3. Afficher le canevas."<< endl;
+      validCanevas_1->afficher(s);
+   s<<endl;
 //4
-   cout << "_____4. Afficher l'aire du canevas."<< endl;
-   cout<<validCanevas_1->aire()<<endl<<endl;
+   s << "_____4. Afficher l'aire du canevas."<< endl;
+   s<<validCanevas_1->aire()<<endl<<endl;
 //5
-   cout <<"_____5. Activer la couche 0."<<"   Retour : " <<validCanevas_1->activerCouche(0)<< endl;
-   cout <<"Ajout d'un rectangle :   x=0, y=0, largeur=1, hauteur=1    Retour : " <<validCanevas_1->ajouterForme(validRectangle_3)<<endl;
-   cout <<"Ajout d'un carre :       x=0, y=0, cote=1                  Retour : " <<validCanevas_1->ajouterForme(validCarre_2)<<endl;
-   cout <<"Ajout d'un cercle :      x=0, y=0, rayon=1                 Retour : " <<validCanevas_1->ajouterForme(validCercle_2)<<endl<<endl;
+   s <<"_____5. Activer la couche 0."<<"   Retour : " <<validCanevas_1->activerCouche(0)<< endl;
+   s <<"Ajout d'un rectangle :   x=0, y=0, largeur=1, hauteur=1    Retour : " <<validCanevas_1->ajouterForme(validRectangle_3)<<endl;
+   s <<"Ajout d'un carre :       x=0, y=0, cote=1                  Retour : " <<validCanevas_1->ajouterForme(validCarre_2)<<endl;
+   s <<"Ajout d'un cercle :      x=0, y=0, rayon=1                 Retour : " <<validCanevas_1->ajouterForme(validCercle_2)<<endl<<endl;
 //6
-   cout <<"_____6. Activer la couche 2."<<"   Retour : " <<validCanevas_1->activerCouche(2)<< endl;
-   cout<<"a)Translation : x=4, y=3"<<"   Retour : " <<validCanevas_1->translater(4,3)<<endl;
-   cout<<"b)Les nouvelles coordonees de cette couche seront:"<<endl;
-   cout<<"  ~Un cercle(x=4, y=3, rayon=5)"<<endl;
-   cout<<"  ~Un carre(x=8, y=4, cote=6)"<<endl;
-   cout<<"  ~Un rectangle(x=6, y=11, largeur=3, hauteur=9)"<<endl<<endl;
-   cout <<"_____7. Couche 3 initialisee."<<"   Retour : " <<validCanevas_1->initCoucheCanevas(3)<<endl<< endl;
-      //cout<<"Verefication du contenu de la couche apres init."<<endl;
-      //validCanevas_1->couches[3].afficherCouche(cout);
+   s <<"_____6. Activer la couche 2."<<"   Retour : " <<validCanevas_1->activerCouche(2)<< endl;
+   s<<"a)Translation : x=4, y=3"<<"   Retour : " <<validCanevas_1->translater(4,3)<<endl;
+   s<<"b)Les nouvelles coordonees de cette couche seront:"<<endl;
+   s<<"  ~Un cercle(x=4, y=3, rayon=5)"<<endl;
+   s<<"  ~Un carre(x=8, y=4, cote=6)"<<endl;
+   s<<"  ~Un rectangle(x=6, y=11, largeur=3, hauteur=9)"<<endl<<endl;
+   s <<"_____7. Couche 3 initialisee."<<"   Retour : " <<validCanevas_1->initCoucheCanevas(3)<<endl<< endl;
+      //s<<"Verefication du contenu de la couche apres init."<<endl;
+      //validCanevas_1->couches[3].afficherCouche(s);
 //8
-   cout <<"_____8. Couche 4 initialisee."<<"   Retour : " <<validCanevas_1->initCoucheCanevas(4)<<endl<< endl;
+   s <<"_____8. Couche 4 initialisee."<<"   Retour : " <<validCanevas_1->initCoucheCanevas(4)<<endl<< endl;
 //9
-   cout <<"_____9. Afficher le canevas."<<endl;
-   validCanevas_1->afficher(cout);
-   cout<<endl;
+   s <<"_____9. Afficher le canevas."<<endl;
+   validCanevas_1->afficher(s);
+   s<<endl;
 //10
-   cout << "_____10. Afficher l'aire du canevas."<< endl;
-   cout<<validCanevas_1->aire()<<endl<<endl;
+   s << "_____10. Afficher l'aire du canevas."<< endl;
+   s<<validCanevas_1->aire()<<endl<<endl;
 //11
-   cout <<"_____11. Activer la couche 0."<<"   Retour : " <<validCanevas_1->activerCouche(0)<<endl;
-   cout<<"a)Retirer la forme 2 de la couche."<<"   Retour : "<<validCanevas_1->retirerForme(1)<<endl<<endl;
+   s <<"_____11. Activer la couche 0."<<"   Retour : " <<validCanevas_1->activerCouche(0)<<endl;
+   s<<"a)Retirer la forme 2 de la couche."<<"   Retour : "<<validCanevas_1->retirerForme(1)<<endl<<endl;
 //12
-   cout <<"_____12. Afficher le canevas."<<endl;
-   validCanevas_1->afficher(cout);
-   cout<<endl;
+   s <<"_____12. Afficher le canevas."<<endl;
+   validCanevas_1->afficher(s);
+   s<<endl;
 //13
-   cout << "_____13. Afficher l'aire du canevas."<< endl;
-   cout<<validCanevas_1->aire()<<endl<<endl;
+   s << "_____13. Afficher l'aire du canevas."<< endl;
+   s<<validCanevas_1->aire()<<endl<<endl;
 //14
-   cout << "_____14. Reinitialiser le canevas."<<"   Retour : " <<validCanevas_1->reinitialiser()<< endl<<endl;
+   s << "_____14. Reinitialiser le canevas."<<"   Retour : " <<validCanevas_1->reinitialiser()<< endl<<endl;
 //15
-   cout <<"_____15. Afficher le canevas."<<endl;
-   validCanevas_1->afficher(cout);
-   cout<<endl;  
-//13
-   cout << "_____16. Afficher l'aire du canevas."<< endl;
-   cout<<validCanevas_1->aire()<<endl<<endl;
+   s <<"_____15. Afficher le canevas."<<endl;
+   validCanevas_1->afficher(s);
+   s<<endl;  
+//16
+   s << "_____16. Afficher l'aire du canevas."<< endl;
+   s<<validCanevas_1->aire()<<endl<<endl;
 }
 
-void Tests::tests_application_cas_02()
+void Tests::tests_application_cas_02(ostream & s)
 {
    //cout << "TESTS APPLICATION (CAS 02)" << endl;  
     // Il faut ajouter les operations realisant ce scenario de test.

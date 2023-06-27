@@ -11,6 +11,7 @@
 #define TEST_H
 
 #include <iostream>
+#include <fstream>
 #include "canevas.h"
 #include "forme.h"
 #include "rectangle.h"
@@ -33,8 +34,8 @@ public:
    void tests_unitaires(); // Appel de tous les tests unitaires
 
    // Methodes pour les tests unitaires des classes
-   void tests_application_cas_01();
-   void tests_application_cas_02();
+   void tests_application_cas_01(ostream & s);
+   void tests_application_cas_02(ostream & s);
    void tests_application(); // Appel de tous les tests applicatifs
 };
 

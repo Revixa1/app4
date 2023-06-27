@@ -149,7 +149,7 @@ void Canevas::afficher(ostream & s)
 {
    for (int i=0 ; i<MAX_COUCHES ; i++ )
    {
-      cout<<"----- Couche "<<i<<endl;
+      s<<"----- Couche "<<i<<endl;
       
       
       

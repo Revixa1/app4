@@ -74,6 +74,9 @@ bool Vecteur::cleanCheckup()
 
 bool  Vecteur::addFormeEnd(Forme *nouvelleForme )
 {
+
+    if(nouvelleForme==NULL){return false;}
+
     if (tailleActuelle >= tailleCapacite )
     {doublerCapacite();}
 
