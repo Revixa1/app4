@@ -3,13 +3,13 @@
 using namespace std;
 
 
-Rectangle::Rectangle(int hauteurIn , int largeurIn , int xcoords, int ycoords)
+Rectangle::Rectangle(int hauteurIn , int largeurIn , int xcoords, int ycoords):Forme(xcoords,ycoords)
 {
     hauteur=hauteurIn;
     largeur=largeurIn;
 
-    ancrage.x=xcoords;
-    ancrage.y=ycoords;
+   // ancrage.x=xcoords;
+    //ancrage.y=ycoords;
 }
 
 Rectangle::~Rectangle()
