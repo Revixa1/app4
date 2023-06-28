@@ -14,9 +14,9 @@ using namespace std;
 int main()
 {  
    Tests tests;
-   //tests.tests_application();
+   tests.tests_application();
    //tests.tests_application_cas_01(cout);
-   tests.tests_application_cas_02(cout);
+   //tests.tests_application_cas_02();
 
    return 0;
 }  

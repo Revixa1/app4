@@ -1,0 +1,59 @@
+Test 1 : activation de la couche -1       Retour:0
+Test 2 : activation de la couche 3        Retour:1
+Test 3 : activation de la couche 7        Retour:0
+Test 4 : ajout d'un cercle (Rayon= -2)    Retour:1
+Test 5 : affichage du canevas             
+----- Couche 0
+Couche initialisee
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Cercle (x=0, y=0, r=-2, aire=12.5664)
+----- Couche 4
+Couche initialisee
+Test 6 : initialisanton couche -2         Retour: 0
+Test 7 : activation de la couche 3        Retour:1
+Test 8 : suppression de la forme -2       Retour: 0
+Test 9 : suppression de la forme 2        Retour: 0
+Test 10 : suppression de la forme 1       Retour: 1
+         affichage du canevas             
+----- Couche 0
+Couche initialisee
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+Test 11: verification aire canevas vide   Aire: 0
+  (Ajout de forme pour test de translation et affichage de celle-ci) 
+----- Couche 0
+Couche initialisee
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Cercle (x=0, y=0, r=1, aire=3.14159)
+Carre (x=0, y=0, c=1, aire=1)
+Rectangle (x=0, y=0, l=1, h=1, aire=1)
+----- Couche 4
+Couche initialisee
+Test 12: Translation de couche(x=1,y=2)   Retour: 1
+----- Couche 0
+Couche initialisee
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Cercle (x=10, y=2, r=1, aire=3.14159)
+Carre (x=10, y=2, c=1, aire=1)
+Rectangle (x=10, y=2, l=1, h=1, aire=1)
+----- Couche 4
+Couche initialisee
+Test 13: desactivation de la couche active Retour: impossible

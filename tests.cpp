@@ -391,27 +391,27 @@ void Tests::tests_application_cas_02(ostream & s)
    s<<"Test 3 : activation de la couche 7        Retour:"<< Canevas_1->activerCouche(7)<<endl;
    s<<"Test 4 : ajout d'un cercle (Rayon= -2)    Retour:"<< Canevas_1->ajouterForme(Cercle_1)<<endl;
    s<<"Test 5 : affichage du canevas             "<<endl;
-      Canevas_1->afficher(cout);
+      Canevas_1->afficher(s);
    s<<"Test 6 : initialisanton couche -2         Retour: " <<Canevas_1->initCoucheCanevas(-2)<< endl;
    s<<"Test 7 : activation de la couche 3        Retour:"<< Canevas_1->activerCouche(3)<<endl;
    s<<"Test 8 : suppression de la forme -2       Retour: " <<Canevas_1->retirerForme(-2)<<endl;
    s<<"Test 9 : suppression de la forme 2        Retour: " <<Canevas_1->retirerForme(2)<<endl;
    s<<"Test 10 : suppression de la forme 1       Retour: " <<Canevas_1->retirerForme(0)<<endl;
    s<<"         affichage du canevas             "<<endl;
-      Canevas_1->afficher(cout); 
+      Canevas_1->afficher(s); 
    s<<"Test 11: verification aire canevas vide   Aire: " <<Canevas_1->aire()<<endl;
    s<<"  (Ajout de forme pour test de translation et affichage de celle-ci) " <<endl;
       Canevas_1->ajouterForme(Cercle_2);
       Canevas_1->ajouterForme(Carre_2);
       Canevas_1->ajouterForme(Rectangle_3);
-      Canevas_1->afficher(cout); 
+      Canevas_1->afficher(s); 
    s<<"Test 12: Translation de couche(x=1,y=2)   Retour: " <<Canevas_1->translater(10,2)<<endl;
-      Canevas_1->afficher(cout); 
+      Canevas_1->afficher(s); 
    s<<"Test 13: desactivation de la couche active Retour: " <<"impossible"<<endl;
    //tests_unitaires_carre();
    //tests_unitaires_cercle();
    //tests_unitaires_rectangle();
 
-   //cout << "TESTS APPLICATION (CAS 02)" << endl;  
+   //s << "TESTS APPLICATION (CAS 02)" << endl;  
     // Il faut ajouter les operations realisant ce scenario de test.
 }

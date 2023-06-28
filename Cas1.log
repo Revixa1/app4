@@ -8,6 +8,7 @@ Ajout d'un rectangle :   x=0, y=0, largeur=4, hauteur=2   Retour : 1
 
 _____3. Afficher le canevas.
 ----- Couche 0
+Couche initialisee
 ----- Couche 1
 Rectangle (x=0, y=0, l=4, h=2, aire=8)
 ----- Couche 2
@@ -20,7 +21,7 @@ Couche initialisee
 Couche initialisee
 
 _____4. Afficher l'aire du canevas.
-149.54
+aire = 149.54
 
 _____5. Activer la couche 0.   Retour : 1
 Ajout d'un rectangle :   x=0, y=0, largeur=1, hauteur=1    Retour : 1
@@ -55,15 +56,14 @@ Couche initialisee
 Couche initialisee
 
 _____10. Afficher l'aire du canevas.
-154.681
+aire = 154.681
 
 _____11. Activer la couche 0.   Retour : 1
-a)Retirer la forme 2 de la couche.   Retour : 1
+a)Retirer la forme 2 de la couche.   Retour : 0
 
 _____12. Afficher le canevas.
 ----- Couche 0
 Rectangle (x=0, y=0, l=1, h=1, aire=1)
-Forme supprimee
 Cercle (x=0, y=0, r=1, aire=3.14159)
 ----- Couche 1
 Rectangle (x=0, y=0, l=4, h=2, aire=8)
@@ -77,12 +77,13 @@ Couche initialisee
 Couche initialisee
 
 _____13. Afficher l'aire du canevas.
-153.681
+aire = 153.681
 
 _____14. Reinitialiser le canevas.   Retour : 1
 
 _____15. Afficher le canevas.
 ----- Couche 0
+Couche initialisee
 ----- Couche 1
 Couche initialisee
 ----- Couche 2
@@ -93,5 +94,7 @@ Couche initialisee
 Couche initialisee
 
 _____16. Afficher l'aire du canevas.
-0
+aire = 0
+
+_____FIN DES TESTS_____
 
